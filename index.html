@@ -1,1072 +1,295 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-        body{
-            margin: 0;
-            padding: 0;
-            /* background-color: black; */
-            overflow-x: hidden;
-            height: 200vh;
-        }
-        nav{
-            width: 100%;
-            height: 166px;
-            position: fixed;
-            z-index: 10;
-        }
-
-        
-        .menu,
-        .first-angle,
-        .main-angle,
-        .last-angle,
-        .main-angle
-        {
-            position: absolute;
-            max-width: 100%;
-        }
-
-        .last-angle{
-            z-index: 0;
-            top: -20%;
-            left: 40%;
-        }
-
-        .main-logo{
-            z-index: 4;
-            position: absolute;
-            left: 15%;
-            top: 10%;
-        }
-        
-        .main-angle{
-            width: 100%;
-            z-index: 3;
-        }
-
-        .first-angle{
-            z-index: 1;
-            height: 50%;
-            top: 30%;
-        }
-
-        .menu{
-            list-style: none;
-            z-index: 4;
-            position: absolute;
-            display: flex;
-            gap: 10px;
-            right: 20%;
-            top: 10%;
-        }
-
-        .menu a {
-            color: var(--Blue, #1A4D70);
-            /* Roboto Medium 16 */
-            font-family: Roboto;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            text-decoration: none;
-        }
-
-        .link::after{
-            content: '';
-            height: 3px;
-            width: 15%;
-            left: 5%;
-            bottom: -10%;
-            position: absolute;
-            background: var(--Orange, #F9572B);
-        }
-
-        #phone{
-            color: var(--Orange, #F9572B);
-        }
-
-        #intro{
-            position: relative;
-            z-index: 0;
-            top: -30px;
-            height: 100vh;
-            width: 100%;
-            background-image: url(images/background.png);
-            display: grid;
-            background-size: 100%;
-            background-repeat: no-repeat;
-            background-position: bottom ;
-
-        }
-
-        .slider{
-            display: flex;
-            justify-self: center;
-            align-self: center;
-            width: 50%;
-        }
-
-        .slider p{
-            color: var(--White, #FFF);
-            font-family: Roboto;
-            font-size: 38px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
-
-        .slider span{
-            color: var(--White, #FFF);
-
-            /* Roboto Bold 24 */
-            font-family: Roboto;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
-
-        .slider-item{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .slider-title{
-            width: max-content;
-        }
-
-        .btn{
-            margin-top: 20px;
-            display: flex;
-            /* align-self: flex-end;  */
-            padding: 12px 40px;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            border: transparent;
-            outline: transparent;
-            color: var(--White, #FFF);
-            border-radius: 4px;
-            background: var(--Orange, #F9572B);
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        }   
-
-        .footer{
-            display: flex;
-            position: absolute;
-            bottom: 0;  
-            width: 150%;
-        }
-
-        .footer-info{
-            width: 70%;
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            background-image: url(images/footer.svg);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .icon{
-            background-color: #F9572B;
-            border-radius: 50%;
-            width: 58px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 58px;
-            padding: 10px;
-        }
-
-        .card{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-        .footer-text{
-            color: var(--Blue, #1A4D70);
-            /* Roboto Black 16 */
-            font-family: Roboto;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 900;
-            line-height: normal;
-        }
-
-        #about{
-            background: var(--Grey-soft, #EFEFEF);
-            color: var(--Blue, #1A4D70);
-
-            /* Roboto Bold 36 */
-            font-family: Roboto;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            padding: 5% 5% 5% 10%;
-        }
-
-        .text-about{
-            width: 50%;
-        }
-
-        .info-in-numbers{
-            gap: 20px;
-            display: flex;
-            position: relative;
-        }
-
-        .about-image{
-            position: absolute;
-            bottom: 40%;
-            right: -15%;
-            width: 60%;
-        }
-
-        #our-tools{
-            font-weight: 700;
-            padding-top: 50px;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 30px;
-        }
-        
-        #our-tools span:first-child{
-            top: -15px;
-            color: var(--Blue, #1A4D70);
-            /* Roboto Bold 36 */
-            font-family: Roboto;
-            font-size: 36px;
-            font-style: normal;
-            line-height: normal;
-            position: absolute;
-        }
-     
-        .menu-about{
-            width: 90%;
-            height: 50px;
-            padding: 0;
-            background: var(--Grey-soft, #EFEFEF);
-        }
-
-        .menu-about ul{
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            padding: 0;
-            margin: 0;
-        }
-
-        .menu-about li{
-            width: 16%;
-            color: var(--Blue, #1A4D70);
-            /* Roboto Black 16 */
-            font-family: Roboto;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 900;
-            line-height: normal;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 50px;   
-        }
-
-        .menu-about li:first-child{
-            color: #EFEFEF;
-            background: var(--Orange, #F9572B);
-        }
-
-        .line-staright{
-            width: 5%;
-            height: 3px;
-            background: var(--Orange, #F9572B);
-        }
-
-        .first-tool{
-            width: 80%;
-            display: flex;
-        }
-
-        .tool-text{
-            width: 50%;
-            color: var(--Blue, #1A4D70);
-
-            /* Roboto Regular 16 */
-            font-family: Roboto;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-        }
-
-        .image-on-right img{
-            width: 100%;
-        }
-
-        #advantages{
-            background-image: url(images/advantages.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            flex-direction: column;
-        }
-
-        #advantages span:first-child{
-            position: absolute;
-            top: 100px;
-            padding-bottom: 32px;
-            color: var(--White, #FFF);
-            /* Roboto Bold 36 */
-            font-family: Roboto;
-            font-size: 36px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
-
-        
-        #advantages span:first-child::after{
-            content: '';
-            height: 3px;
-            width: 30%;
-            position: absolute;
-            bottom: 0;
-            left: 35%;
-            background: var(--Orange, #F9572B);
-        }
-
-        .advantages-cards{
-            margin-top: 200px;
-            width: 80%;
-            display: flex;
-            /* flex-wrap: wrap; */
-            gap: 20px;
-            top: 10px;
-            z-index: 2;
-        }
-
-        .advantages-card{
-            padding: 50px;
-            width: 384px;
-            height: 445px;
-            background: var(--White, #FFF);
-            color: var(--Blue, #1A4D70);
-            /* Roboto Bold 24 */
-            font-family: Roboto;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
-
-        .advantages-card p{
-            font-size: 16px;
-        }
-
-        .advantages-card h1{
-            height: 120px;
-        }
-
-        .advantages-card span{
-            background: var(--Orange, #F9572B);
-            width: 100%;
-            height: 3px;
-            display: flex;
-        }
-
-        .advantages-bottom svg{
-            position: absolute;
-            left: 0;
-            bottom: -10%;    
-            z-index: 0;
-        }
-        
-        .advantages-bottom svg:not(:first-child){
-            z-index: -1;
-        }
-
-        #customers{
-            color: var(--Blue, #1A4D70);
-            text-align: center;
-            height: 20vh;
-            /* Roboto Bold 36 */
-            font-family: Roboto;
-            font-size: 36px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 20px;
-            padding-bottom: 500px;
-        }
-
-        .customer-logos{
-            width: 100%;
-            margin-top: 500px;
-            display: flex;
-            position: absolute;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .customer-logo img{
-            min-width: 230.64px;
-            max-width: 322px;
-        }
-
-        
-        .customer-logo{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #order-form{
-            background-image: url('images/order-form.png');
-            min-height: calc(100vh + 500px);
-            width: 100%;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #order-form span:first-child{
-            color: var(--White, #FFF);
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            text-align: center;
-            max-width: 1200px;
-            /* Roboto Bold 36 */
-            font-family: Roboto;
-            font-size: 36px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            position: absolute;
-            width: 100%;
-            top: 10%;
-        }
-
-        #order-form .line-staright{
-            position: absolute;
-            top: 30%;
-        }
-
-        #order-form .footer{
-            width: 100%;
-            bottom: -1px;
-        }
-        .base-form{
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            top: 40%;
-            width: 30%;
-        }
-
-        .base-form form{
-            display: flex;
-            flex-direction: column;
-        }
-
-        .base-form label,.base-form p{
-            color: var(--White, #FFF);
-
-            /* Roboto Regular 14 */
-            font-family: Roboto;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-        }
-
-        .base-form input{
-            border: transparent;
-            outline: transparent;
-            display: flex;
-            width: 100%;
-            height: 100%;
-            padding: 12px 40px;
-            justify-content: center;
-            border-radius: 4px;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .base-form .btn{
-            justify-self: center;
-            align-self: center;
-        }
-
-        #objects{
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        #objects h1{
-            color: var(--Blue, #1A4D70);
-
-            /* Roboto Bold 36 */
-            font-family: Roboto;
-            font-size: 36px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
-
-        
-        #contacts{
-            min-height: 120vh;
-            background-image: url(images/contacts.png);
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            color: var(--White, #FFF);
-            display: flex;
-            align-items: center ;
-            justify-content: center;
-            flex-direction: column;
-            padding-top: 50px;
-            /* Roboto Bold 36 */
-            font-family: Roboto;
-            font-size: 36px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            position: relative;
-        }
-
-        
-        #contacts span:first-child
-        {
-            position: absolute;
-            top: 10%;
-        }
-
-        
-        #contacts .line-staright {
-            
-            position: absolute;
-            top: 20%;
-        }
-
-        .contacts-block{
-            margin-top: 200px;
-            display: flex;
-            border-radius: 8px;
-            background: var(--White, #FFF);
-            width: 80%;
-            min-height: 80vh;
-        }
-        
-        .contacts-right{
-            display: flex;
-            flex-direction: column;
-            right: 0;
-            position: absolute;
-            width: 60%;
-            color: var(--Blue, #1A4D70);
-            font-family: Roboto;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            display: flex;
-        }
-
-        
-        .contacts-right p{
-            width: 80%;
-        }
-
-        
-        .contacts-right input{
-            width: 280px;
-            height: 43px;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            border-radius: 4px;
-            border: 1px solid var(--Grey-medium, #D8D8D8);
-        }
-
-        .contacts-right input{
-            margin-right: 30px;
-        }
-
-        .contacts-left{
-            background: var(--Orange, #F9572B);
-            color: var(--White, #FFF);
-            /* Roboto Black 16 */
-            font-family: Roboto;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 900;
-            line-height: normal;
-            width: 20%;
-            padding: 40px;
-            position: absolute;
-            height: 50%;
-        }
-
-        
-        .contacts-left div:first-child{
-            margin-bottom: 60px;
-            gap: 50px;
-        }
-
-        .contacts-left{
-            gap: 100px;
-        }
-
-        
-        .contacts-left-info{
-            /* margin-top: 20px; */
-            background: var(--Grey-hard, #777);
-            padding: 5% 10%;
-            width: 80%;
-            position: absolute;
-            left: 0;
-        }
-
-        #phoneInput{
-            width: 65%;
-        }
-
-        .comment{
-            display: flex; 
-            flex-direction: column;
-            width: 80%;
-            gap: 20px;
-        }
-
-        
-        .comment textarea{
-            border-radius: 4px;
-border: 1px solid var(--Grey-medium, #D8D8D8);
-        }
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/reset.css">
+  <title>Аренда специализированных насосных станций</title>
+  <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-    <nav>
-        <img src="images/first-angle.svg" class="first-angle" alt="first-angle">
-        <img src="images/logo.svg" alt="logo" class="main-logo">
-        <img src="images/main-angle.svg" class="main-angle" alt="main-angle">
-        <img src="images/last-angle.svg" class="last-angle" alt="last-angle">
-        <ul class="menu">
-            <li><a class="link" href="#">О компании</a></li>
-            <li><a class="link" href="#">Наши преимущества</a></li>
-            <li><a class="link" href="#">Заказчики</a></li>
-            <li><a class="link" href="#">Объекты</a></li>
-            <li><a class="link" href="#">Контакты</a></li>
-            <li><a class="link" href="tel: 8 800 600-15-05" id="phone">8 800 600-15-05</a></li>
-        </ul>
-    </nav>
-    
-    <section id="intro">
-        <div class="slider">
-            <div class="slider-item">
-                <div class="slider-title">
-                    <p style="width: min-content;">
-                        Аренда специализированных насосных станций
-                    </p>
-                    <span>
-                        для водопонижения и водоотведения
-                    </span>
-                    <button class="btn">
-                        Заказать звонок
-                    </button>
-                </div>
-                <div>
-                    <img src="images/bump.png" alt="bump" width="600px">
-                </div>
-            </div>
-        </div>
-        <div class="footer">
-            <!-- <img src="images/footer.svg" alt="footer" class="footer"> -->
-            <div class="footer-info">
-                <div class="card">
-                    <div class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <path d="M29.3332 7.99998C29.3332 6.53331 28.1332 5.33331 26.6665 5.33331H5.33317C3.8665 5.33331 2.6665 6.53331 2.6665 7.99998V24C2.6665 25.4666 3.8665 26.6666 5.33317 26.6666H26.6665C28.1332 26.6666 29.3332 25.4666 29.3332 24V7.99998ZM26.6665 7.99998L15.9998 14.6666L5.33317 7.99998H26.6665ZM26.6665 24H5.33317V10.6666L15.9998 17.3333L26.6665 10.6666V24Z" fill="white"/>
-                          </svg>
-                    </div>
-                    <div class="footer-text">
-                        <p>Cвязь с нами</p>
-                        <p>8 800 600-15-05</p>
-                        <p>office@sahara-group.ru</p>
 
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <g clip-path="url(#clip0_59_346)">
-                              <path d="M16.1145 -0.0114746C9.555 -0.0114746 4 5.57503 4 12.193C4 19.123 10.4385 26.21 14.7695 31.191C14.786 31.211 15.486 31.9885 16.3485 31.9885H16.425C17.2875 31.9885 17.9825 31.211 18 31.191C22.0645 26.5185 28 18.8145 28 12.193C28 5.57503 23.667 -0.0114746 16.1145 -0.0114746ZM16.5155 29.8495C16.4805 29.8845 16.4295 29.9236 16.3845 29.9561C16.3385 29.9246 16.2885 29.8846 16.2515 29.8496L15.7285 29.2481C11.6225 24.5375 6 18.0871 6 12.193C6 6.66153 10.632 1.98803 16.1145 1.98803C22.9435 1.98803 26 7.11303 26 12.193C26 16.6675 22.8085 22.6085 16.5155 29.8495ZM16.035 6.04403C12.7215 6.04403 10.035 8.73053 10.035 12.044C10.035 15.3575 12.7215 18.044 16.035 18.044C19.3485 18.044 22.035 15.3575 22.035 12.044C22.035 8.73053 19.3485 6.04403 16.035 6.04403ZM16.035 16.044C13.8295 16.044 11.9889 14.206 11.9889 12C11.9889 9.79453 13.7834 8.00003 15.9889 8.00003C18.1959 8.00003 19.9889 9.79453 19.9889 12C19.9899 14.206 18.242 16.044 16.035 16.044Z" fill="white"/>
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_59_346">
-                                <rect width="32" height="32" fill="white"/>
-                              </clipPath>
-                            </defs>
-                          </svg>
-                        </div>
-                        <div class="footer-text">
-                          <p>Наша локация</p>
-                          <p>Ленинградская область, 
-                            </p>
-                          <p>Новоприозерское ш.11 км. Трасса А-121</p>
+  <header class="header">
+    <div class="header_wrapper">
+      <img class="white" src="/img/Rectangle 8 (4).png" alt="">
+      <img class="bluee" src="/img/Rectangle 10 (1).png" alt="">
+
+      <a href=""><img src="/img/Logo.png" alt="логотип компании" class="header_logo"></a>
+      <button class="header_button"></button>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section>  
+          <section class="main-str">
+              
+              <h1></h1>
+              <p class="main_title">Аренда специализированных насосных станций</p><p class="main_txt">для водопонижения и водоотведения</p>
+              <img src="/img/Bump 1 (2).png" alt="насос" class="nasos">
+              <button class="main_button">Заказать звонок</button>
+          </section>
   
-                      </div>
-                </div>
-            </div>
+          <img src="/img/Graphic (3).svg" alt="" class="grafic">
+  
+          <ul class="main_list">
+                <li class="main_li main_iteam1">
+                  <img class="main_image" src="/img/pochta.png" alt="логотип в виде почты" class="pochta">
+                  <div class="main_list_content">
+                    <h3 class="main_list_title">Cвязь с нами</h3>
+                    <a href="" class="list_link">8 800 600-15-05</a>
+                    <a href="" class="list_link">office@sahara-group.ru</a>
+                  </div>
+                </li>
+      
+                <li class=" main_li main_iteam2">
+                  <img class="main_image" src="/img/Ellipse 174 (1).png" alt="логотип локации" class="loc_pic">
+                  <div class="main_list_content">
+                    <h3 class="main_list_title">Наша локация</h3>
+                    <p class="main_list_txt">Ленинградская область, Новоприозерское ш.11 км. Трасса А-121</p>
+                  </div>
+                </li>
+          </ul>
         </div>
-
     </section>
 
-    <section id="about">
-        <div class="text-about">
-            <p style="border-bottom: 3px solid #F9572B; width: max-content;">О компании</p>
-            <p>Уже более 8 лет специалисты компании Сахара Груп решают задачи любой сложности как в сфере водоотведения при проведении бестраншейного ремонта и строительства наружных сетей водоснабжения, канализации и трубопроводов, так и в сфере водопонижения грунтовых вод и осушения котлованов при строительстве зданий и иных сооружений.
-                Мы используем в работе высококачественное оборудование признанного мирового лидера в производстве насосов – голландскую компанию BBA pumps. Наши насосные станции отличаются от конкурентов стабильной работой в любых погодных условиях, максимальной эффективностью при минимальном расходе топлива, а также низким уровнем шума (менее 48 дБ), что позволяет использовать их в городских условиях</p>
-        </div>
-        <div class="info-in-numbers">
-            <div>
-                
-                <svg xmlns="http://www.w3.org/2000/svg" width="180" height="107" viewBox="0 0 180 107" fill="none">
-                    <path d="M39.4182 3.57554C43.1724 1.36844 47.8276 1.36843 51.5818 3.57554L85.0818 23.2706C88.7484 25.4263 91 29.3619 91 33.6153V73.3847C91 77.6381 88.7484 81.5737 85.0818 83.7294L51.5818 103.424C47.8276 105.632 43.1724 105.632 39.4182 103.424L5.91825 83.7294C2.25158 81.5737 0 77.6381 0 73.3847V33.6153C0 29.3619 2.25157 25.4263 5.91824 23.2706L39.4182 3.57554Z" fill="white"/>
-                    <path d="M60.2 80.1599V85.9999H17V74.7999C17 60.7999 25.56 58.9599 38.28 57.8399C51.8 56.6399 53.56 54.1599 53.56 44.4799C53.56 35.0399 49.8 31.2799 39 31.2799C26.12 31.2799 23.4 35.6799 23.4 43.9999V46.4799H17C17 30.4799 21.96 25.4399 39.16 25.4399C53.64 25.4399 60.2 30.4799 60.2 44.5599C60.2 59.6799 55.08 62.0799 40.04 63.6799C25.72 65.1999 23.4 67.1199 23.4 75.4399V80.1599H60.2Z" fill="#F9572B"/>
-                    <path d="M116.076 55.8399C116.076 80.6399 108.716 86.6399 90.7163 86.6399C72.7163 86.6399 65.3563 80.6399 65.3563 55.8399C65.3563 31.0399 72.6363 25.4399 90.7163 25.4399C108.716 25.4399 116.076 31.0399 116.076 55.8399ZM109.436 55.8399C109.436 35.4399 106.076 31.2799 90.7163 31.2799C75.2763 31.2799 71.9963 35.4399 71.9963 55.7599C71.9963 75.9999 75.4363 80.7999 90.7163 80.7999C105.916 80.7999 109.436 75.9199 109.436 55.8399Z" fill="#F9572B"/>
-                    <path d="M120.278 53.5999H138.678V36.2399H142.518V53.5999H161.078V57.3599H142.518V74.7199H138.678V57.3599H120.278V53.5999Z" fill="#F9572B"/>
-                </svg>
-                <p>
-                    Успешно реализованных <br> проектов
-                </p>
-            </div>
-             <div>   
-                <svg xmlns="http://www.w3.org/2000/svg" width="180" height="107" viewBox="0 0 180 107" fill="none">
-                    <path d="M39.4182 3.57554C43.1724 1.36844 47.8276 1.36843 51.5818 3.57554L85.0818 23.2706C88.7484 25.4263 91 29.3619 91 33.6153V73.3847C91 77.6381 88.7484 81.5737 85.0818 83.7294L51.5818 103.424C47.8276 105.632 43.1724 105.632 39.4182 103.424L5.91825 83.7294C2.25158 81.5737 0 77.6381 0 73.3847V33.6153C0 29.3619 2.25157 25.4263 5.91824 23.2706L39.4182 3.57554Z" fill="white"/>
-                    <path d="M62.2 80.1599V85.9999H19V74.7999C19 60.7999 27.56 58.9599 40.28 57.8399C53.8 56.6399 55.56 54.1599 55.56 44.4799C55.56 35.0399 51.8 31.2799 41 31.2799C28.12 31.2799 25.4 35.6799 25.4 43.9999V46.4799H19C19 30.4799 23.96 25.4399 41.16 25.4399C55.64 25.4399 62.2 30.4799 62.2 44.5599C62.2 59.6799 57.08 62.0799 42.04 63.6799C27.72 65.1999 25.4 67.1199 25.4 75.4399V80.1599H62.2Z" fill="#F9572B"/>
-                    <path d="M76.0762 56.3999V26.1599H116.396V31.9999H82.4762V49.9199C86.0762 45.1199 92.7163 44.9599 98.1563 44.9599C112.396 44.9599 118.556 49.7599 118.556 63.8399C118.556 81.1199 114.556 86.6399 97.0363 86.6399C82.7963 86.6399 74.7962 85.5199 74.7962 68.7999H81.4363C81.4363 78.7999 83.0363 80.7999 97.0363 80.7999C107.436 80.7999 111.916 78.4799 111.916 67.7599C111.916 54.7999 109.756 50.7999 98.2363 50.7999C85.5163 50.7999 83.5962 52.1599 82.4762 56.3999H76.0762Z" fill="#F9572B"/>
-                    <path d="M126.278 53.5999H144.678V36.2399H148.518V53.5999H167.078V57.3599H148.518V74.7199H144.678V57.3599H126.278V53.5999Z" fill="#F9572B"/>
-                </svg>
-                <p>
-                    Насосных установок <br> различной мощности
-                </p>
-             </div>
-             <div>
-                 <svg xmlns="http://www.w3.org/2000/svg" width="120" height="107" viewBox="0 0 120 107" fill="none">
-                   <path d="M39.4182 3.57554C43.1724 1.36844 47.8276 1.36843 51.5818 3.57554L85.0818 23.2706C88.7484 25.4263 91 29.3619 91 33.6153V73.3847C91 77.6381 88.7484 81.5737 85.0818 83.7294L51.5818 103.424C47.8276 105.632 43.1724 105.632 39.4182 103.424L5.91825 83.7294C2.25158 81.5737 0 77.6381 0 73.3847V33.6153C0 29.3619 2.25157 25.4263 5.91824 23.2706L39.4182 3.57554Z" fill="white"/>
-                   <path d="M41.32 57.92C28.36 57.92 25.64 60.72 25.64 69.44C25.64 78.16 28.36 80.8 41.4 80.8C54.36 80.8 57.16 78.32 57.16 69.2C57.16 60.72 54.36 57.92 41.32 57.92ZM41.32 31.36C29 31.36 26.52 34.16 26.52 41.52C26.52 50.08 28.36 52.24 41.32 52.24C54.84 52.24 56.28 49.44 56.28 41.6C56.28 34.4 53.96 31.36 41.32 31.36ZM29.32 54.8C20.92 53.12 19.88 48.48 19.88 41.6C19.88 29.52 25.32 25.52 41.56 25.52C57.72 25.52 62.92 29.52 62.92 41.52C62.92 48.24 61.8 53.04 53.32 54.8C61.4 56.24 63.8 61.36 63.8 68.8C63.8 81.92 60.04 86.64 41.32 86.64C22.92 86.64 19 81.84 19 68.48C19 61.36 20.68 56.48 29.32 54.8Z" fill="#F9572B"/>
-                   <path d="M71.5963 53.6H89.9963V36.24H93.8363V53.6H112.396V57.36H93.8363V74.72H89.9963V57.36H71.5963V53.6Z" fill="#F9572B"/>
-                 </svg>
-                 <p>Лет на рынке <br> водопонижения</p>
-             </div>
-             <div>
-                <img src="images/bump2.png" class="about-image">
-             </div>
-        </div>
+    <section class="company">
+      <div class="wrapper">
+        <h2 class="company_title">О компании</h2>
+        <div class="line"></div>
+
+        <p class="company_list_txt">Уже более 8 лет специалисты компании Сахара Груп решают задачи любой сложности как в сфере водоотведения при проведении бестраншейного ремонта и строительства наружных сетей водоснабжения, канализации и трубопроводов, так и в сфере водопонижения грунтовых вод и осушения котлованов при строительстве зданий и иных сооружений.</p>
+        <p class="company_list_txt">Мы используем в работе высококачественное оборудование признанного мирового лидера в производстве насосов – голландскую компанию BBA pumps. Наши насосные станции отличаются от конкурентов стабильной работой в любых погодных условиях, максимальной эффективностью при минимальном расходе топлива, а также низким уровнем шума (менее 48 дБ), что позволяет использовать их в городских условиях</p>
+        
+
+        <ul class="company_list">
+          <li class="company_iteam">
+            <img src="/img/Info-1.png" alt="" class="company_pic">
+            <p class="company_txt">Успешно реализованных проектов</p>
+          </li>
+
+          <li class="company_iteam">
+            <img src="/img/Info-2.png" alt=" 25+" class="company_pic">
+            <p class="company_txt">Насосных установок различной мощности</p>
+          </li>
+
+          <li class="company_iteam">
+            <img src="/img/Info-3.png" alt=" 8 лет" class="company_pic">
+            <p class="company_txt">Лет на рынке водопонижения</p>
+          </li>
+        </ul>
+
+        <img src="/img/bba_pumps_electrically_driven_portable_pumps 1.svg" alt="насос" class="wrapper_pic">
+
+      </div>
+    </section>
+
+    <section class="equipment-info">
+      <div class="wrapper">
+        <h2 class="equipment-info_title">Наше оборудование</h2>
+        <div class="line"></div>
+        <ul class="knopki_slaida">
+          <li>
+            <button class="equipment-info_button">BA100K D193</button>
+            <button class="equipment-info_button">BA150E D285</button>
+            <button class="equipment-info_button"></button>
+          </li>
+        </ul>
+        <h3 class="name-equipment">BA100K D193</h3>
+        <p class="equipment-info_txt first">Насосный агрегат ВА100К D193 с максимальной производительностью 190 м3/ч и способностью перекачивать твердые включения диаметром до 82 мм является самой популярной моделью серии BA.</p>
+        <p class="equipment-info_txt">Данный насос имеет компактный корпус и низкий уровень шума, благодаря чему его можно использовать даже в густонаселенных районах крупных городов</p>
+        <ul>
+          <li> <img src="/img/nasos2.png" alt="насос1" class="equipment-info_pic"><img src="" alt="насос2"><img src="" alt="насос3"></li>
+        </ul>
+
+        
+      </div>
+    </section>
+
+    <section class="advantages">
+      <div class="wrapper">
+        <h2 class="advantages_title">Наши преимущества</h2>
+        <div class="line"></div>
+
+        <ul class="advantages_list">
+          <ol class="advantages_iteam-first">
+            <img src="/img/Icon-1.png" alt="грузовик" class="advantages_pic">
+            <h3 class="advantages_list_title">Работаем по всей России</h3>
+            <div class="advantages-line"></div>
+            <p class="advantages_txt-info">Мы готовы произвести работы в любой точке России в максимально сжатые сроки. Мы ценим время заказчика и организуем доставку на объект самостоятельно вне зависимости от количества оборудования.</p>
+          </ol>
+
+          
+          <div class="blue">
+            <ol class="advantages_iteam">
+              <img src="/img/Icon-2.png" alt="лого достижений " class="advantages_pic">
+              <h3 class="advantages_list_title">Лучшее в классе оборудование</h3>
+              <div class="advantages-line"></div>
+              <p class="advantages_txt-info">Мы используем только насосы BBA pumps при проведении работ. Все наши установки выпущены не позже 2017 года, в идеальном техническом состоянии.</p>
+            </ol>
+            
+  
+            <ol class="advantages_iteam">
+              <img src="/img/Icon-3.png" alt="лого консультации" class="advantages_pic">
+              <h3 class="advantages_list_title">Бесплатный выезд и консультация</h3>
+              <div class="advantages-line"></div>
+              <p class="advantages_txt-info">Бесплатный выезд и консультации в любой точке России, постоянная поддержка и полное сопровождение работ на каждом этапе оказываемых услуг.</p>
+            </ol>
+          </div>
+        </ul>
+      
+
+      </div>
     </section>
     
-    <section id="our-tools">
-        <span>Наше оборудование</span>
+    
 
-        <div class="line-staright">
+    <section class="customers">
+      <div class="wrapper">
 
-        </div>
-        
-        <div class="menu-about">
-            <ul>
-                <li>BA100K D193</li>
-                <li>BA150E D285</li>
-                <li>BA180E D328</li>
-                <li>BA300E D328</li>
-                <li>PT150 D155</li>
+        <img class="gray_pic" src="/img/Graphic gray.svg" alt="">
+
+        <h2 class="customers_title">Заказчики</h2>
+
+        <div class="line-customers"></div>
+
+        <ul class="customers_list">
+          <li><img src="/img/Aarsleff.svg" alt=" лого arr" class="customers_iteam"></li>
+          <li><img src="/img/Megameid.svg" alt="лого megamed" class="customers_iteam"></li>
+          <li><img src="/img/Tehnomet.svg" alt="лого technomed" class="customers_iteam"></li>
+          <li><img src="/img/CTIC.svg" alt="лого stis" class="customers_iteam"></li>
+        </ul>
+
+      </div>
+    </section>
+
+    <section class="registr">
+      <div class="wrapper">
+        <h2></h2>
+        <p class="registr_txt">Закажите консультацию, расчет стоимости работ или выезд специалиста на объект</p>
+        <div class="registr-line"></div>
+        <form action="" class="registr_form">
+          <label for="name">
+            <span>Ваше имя</span>
+            <input class="form_input" id="name" type="text">
+          </label>
+
+          <label for="name_company">
+            <span>Название компании</span>
+            <input class="form_input" id="name_company" type="text">
+          </label>
+
+          <label for="telephone">
+            <span>Телефон</span>
+            <input class="form_input" id="telephone" type="text">
+          </label>
+
+          <a href="" class="registr_iteam">Я даю свое согласие на обработку моей персональной информации в соответствии с политикой конфиденциальности</a>
+          <button type="submit" class="registr_button">Отправить запрос</button>
+        </form>
+
+        <img class="line_grafic" src="/img/Graphic (4).svg" alt="">
+      </div>
+    </section>
+
+    <section class="geographical">
+      <div class="wrapper">
+
+        <h2 class="geographical_txt">Наши объекты</h2>
+        <div class="line"></div>
+        <img src="/img/mother-russia.jpg" alt="карта России" class="geographical_pic">
+
+       
+          <div class="container__list">
+            <ul id="list" class="geographical_list-first">
+              <li class="geographical_iteam">Екатеринбург</li>
+              <li class="geographical_iteam">Москва </li>
+              <li class="geographical_iteam">Казань</li>
             </ul>
-        </div>
+  
+            <ul class="geographical_list_two" >
+              <li class="geographical_iteam">Санкт-Петербург</li>
+              <li class="geographical_iteam">Краснодар</li>
+              <li class="geographical_iteam">Тюмень</li>
+            </ul>
+          </div>
+      </div>
+    </section>
+  </main>
 
-        <div class="first-tool">
-            <div class="text-on-left">
-                <div class="tool-text">
-                    <h1>
-                        BA100K D193
-                    </h1>
-                    <p>Насосный агрегат ВА100К D193 с максимальной производительностью 190 м3/ч и способностью перекачивать твердые включения диаметром до 82 мм является самой популярной моделью серии BA.</p>
-                    <p>
-                        Данный насос имеет компактный корпус и низкий уровень шума, благодаря чему его можно использовать даже в густонаселенных районах крупных городов.
-                    </p>
-                </div>
-            </div>
-            <div class="image-on-right">
-                <img src="images/bump3.jpeg" alt="">
-            </div>
-        </div>
-        
-    </section>
+  <footer>
+    <section class="contacts">
+      <div class="wrapper">
+          <div class="image-part">
+            <h2 class="contacts_txt-title">Контакты</h2>
+            <div class="line"></div>
+  
+              <ul class="contacts_list">
+                <li class="contacts_iteam">
+                  <img src="/img/mdi_email-outline.svg" alt="картинка почты" class="contacts_pic">
+                  <h3 class="contacts_txt">Связь с нами</h3>
+                  <a href="" class="contacts_link">8 800 600-15-05</a>
+                  <a href="" class="contacts_link">office@sahara-group.ru</a>
+                </li>
+                <li class="contacts_iteam">
+                  <img src="/img/simple-line-icons_location-pin.svg" alt="картинка локации" class="contacts_pic">
+                  <h3 class="contacts_txt">Наша локация</h3>
+                  <p class="contacts_iteam_txt">Ленинградская область, Новоприозерское ш.11 км. Трасса А-121</p>
+                </li>
+              </ul>
+          </div>
+          <div class="blue-part">
+            <ul class="processing_information">
+              <li class="processing-information_txt">Наши менеджеры обработают вашу заявку и сразу же свяжутся с вами в рабочее время 9:00 — 18:00 МСК.</li>
+            </ul>
+            
     
-    <section id="advantages">
-        <span>Наши преимущества</span>
-        
-        <div class="advantages-cards">
-            <div class="advantages-card">
-                <svg xmlns="http://www.w3.org/2000/svg" width="74" height="88" viewBox="0 0 74 88" fill="none">
-                    <path d="M32.8434 1.52769C35.3969 -0.0251509 38.6031 -0.0251486 41.1566 1.52769L70.1566 19.1628C72.5432 20.6141 74 23.205 74 25.9982V62.0018C74 64.795 72.5432 67.3859 70.1566 68.8372L41.1566 86.4723C38.6031 88.0251 35.3969 88.0251 32.8434 86.4723L3.84335 68.8372C1.45681 67.3859 0 64.795 0 62.0018V25.9982C0 23.205 1.45681 20.6141 3.84335 19.1628L32.8434 1.52769Z" fill="#EFEFEF"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="114" height="51" viewBox="0 0 114 51" fill="none">
-                    <g clip-path="url(#clip0_59_395)">
-                      <path d="M71.6956 32.1028H38.8057V23.9417H71.6956V32.1028ZM40.6825 30.2344H69.8188V25.8101H40.6825V30.2344Z" fill="#F9572B"/>
-                      <path d="M71.6956 22.9852H38.8057V14.824H71.6956V22.9852ZM40.6825 21.1168H69.8188V16.6924H40.6825V21.1168Z" fill="#F9572B"/>
-                      <path d="M71.6956 13.8673H38.8057V5.70239H71.6956V13.8636V13.8673ZM40.6825 11.9989H69.8188V7.57454H40.6825V11.9989Z" fill="#F9572B"/>
-                      <path d="M114 32.1028H80.3594V23.9417H114V32.1028ZM82.2362 30.2344H112.123V25.8101H82.2362V30.2344Z" fill="#F9572B"/>
-                      <path d="M114 22.9852H80.3594V14.824H114V22.9852ZM82.2362 21.1168H112.123V16.6924H82.2362V21.1168Z" fill="#F9572B"/>
-                      <path d="M114 13.8673H80.3594V5.70239H114V13.8636V13.8673ZM82.2362 11.9989H112.123V7.57454H82.2362V11.9989Z" fill="#F9572B"/>
-                      <path d="M97.7276 45.9591L97.7163 44.0907L99.0263 44.0832L103.219 38.9227V35.8697L98.3957 35.8809L98.3882 34.0125L105.096 33.9976V39.5804L99.931 45.9441L97.7276 45.9591Z" fill="#1A4D70"/>
-                      <path d="M21.6739 51C16.9855 51 13.168 47.1996 13.168 42.5249C13.168 37.8501 16.9817 34.0012 21.6739 34.0012C26.366 34.0012 30.1798 37.824 30.1798 42.5249C30.1798 47.2258 26.366 51 21.6739 51ZM21.6739 35.8696C18.0178 35.8696 15.0448 38.8553 15.0448 42.5249C15.0448 46.1944 18.0178 49.1316 21.6739 49.1316C25.33 49.1316 28.3029 46.1683 28.3029 42.5249C28.3029 38.8815 25.33 35.8696 21.6739 35.8696Z" fill="#1A4D70"/>
-                      <path d="M68.1411 51C63.4528 51 59.6353 47.1996 59.6353 42.5249C59.6353 37.8501 63.449 34.0012 68.1411 34.0012C72.8333 34.0012 76.647 37.824 76.647 42.5249C76.647 47.2258 72.8333 51 68.1411 51ZM68.1411 35.8696C64.485 35.8696 61.5121 38.8553 61.5121 42.5249C61.5121 46.1944 64.485 49.1316 68.1411 49.1316C71.7973 49.1316 74.7702 46.1683 74.7702 42.5249C74.7702 38.8815 71.7973 35.8696 68.1411 35.8696Z" fill="#1A4D70"/>
-                      <path d="M87.5137 51C82.8253 51 79.0078 47.1996 79.0078 42.5249C79.0078 37.8501 82.8216 34.0012 87.5137 34.0012C92.2058 34.0012 96.0196 37.824 96.0196 42.5249C96.0196 47.2258 92.2058 51 87.5137 51ZM87.5137 35.8696C83.8576 35.8696 80.8847 38.8553 80.8847 42.5249C80.8847 46.1944 83.8576 49.1316 87.5137 49.1316C91.1698 49.1316 94.1428 46.1683 94.1428 42.5249C94.1428 38.8815 91.1698 35.8696 87.5137 35.8696Z" fill="#1A4D70"/>
-                      <path d="M57.2629 44.0906H32.7212V45.959H57.2629V44.0906Z" fill="#1A4D70"/>
-                      <path d="M25.2287 10.3583V16.9799L19.0051 17.9852L17.5299 18.2243L17.4323 19.7078L17.132 24.263H12.8753C13.9338 20.2497 17.2859 12.649 18.5697 10.3621H25.225M27.1018 8.49365H17.6237C16.9931 8.49365 10.6719 22.3497 10.6719 26.1314H18.8887L19.3054 19.8311L27.1018 18.5718V8.49365Z" fill="#1A4D70"/>
-                      <path d="M78.768 32.1029H73.6592V0H78.768V32.1029ZM75.536 30.2345H76.8911V1.86841H75.536V30.2345Z" fill="#1A4D70"/>
-                      <path d="M11.4075 45.959H1.7755C0.795785 45.959 0 45.1668 0 44.1915V39.7709C0 38.7955 0.795785 38.0071 1.7755 38.0071H2.15463C2.15087 36.7739 2.13586 35.5894 2.1246 34.416C2.09081 31.1014 2.05703 27.97 2.19592 24.0501L2.20342 23.9679C2.56003 21.1167 3.76872 18.7849 6.2274 16.2215C7.42483 10.9787 8.92255 7.23444 10.8032 4.77562C13.1455 1.71517 15.668 1.25928 16.9592 1.25928H34.2488V34.0124H57.2665V35.8808H32.3719V3.12768H16.9592C16.0133 3.12768 14.1477 3.49015 12.2934 5.90787C10.5742 8.15369 9.12901 11.8457 7.99914 16.8829L7.94284 17.1407L7.75515 17.3313C5.49167 19.6444 4.38808 21.6884 4.06902 24.1547C3.93388 28.0148 3.96767 31.1127 4.00145 34.3936C4.01646 35.8696 4.03148 37.3606 4.03148 38.9413V39.8755H1.87685V44.0906H11.4075V45.959Z" fill="#1A4D70"/>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_59_395">
-                            <rect width="114" height="51" fill="white"/>
-                        </clipPath>
-                    </defs>
-                </svg>
-                <h1>Работаем <br>
-                    по всей России</h1>
-                <span></span>
-                <p>Мы готовы произвести работы в любой точке России в максимально сжатые сроки. Мы ценим время заказчика и организуем доставку на объект самостоятельно вне зависимости от количества оборудования.</p>
-            </div>
-            <div class="advantages-card">
-                <svg xmlns="http://www.w3.org/2000/svg" width="74" height="88" viewBox="0 0 74 88" fill="none">
-                    <path d="M32.8434 1.52769C35.3969 -0.0251509 38.6031 -0.0251486 41.1566 1.52769L70.1566 19.1628C72.5432 20.6141 74 23.205 74 25.9982V62.0018C74 64.795 72.5432 67.3859 70.1566 68.8372L41.1566 86.4723C38.6031 88.0251 35.3969 88.0251 32.8434 86.4723L3.84335 68.8372C1.45681 67.3859 0 64.795 0 62.0018V25.9982C0 23.205 1.45681 20.6141 3.84335 19.1628L32.8434 1.52769Z" fill="#EFEFEF"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="84" height="80" viewBox="0 0 84 80" fill="none">
-                    <g clip-path="url(#clip0_59_418)">
-                      <path d="M61.1361 8.68608C49.4109 9.16013 40.0988 18.813 40.0988 30.601C40.0988 38.4658 44.2636 45.4909 50.7071 49.3766V70.4181C50.7071 71.1646 51.5662 71.6237 52.1863 71.131L61.1324 64.4531V78.156L1.82288 78.0664V1.82531H61.1361V8.68608ZM52.5187 50.3658C58.5251 53.2475 65.5737 53.2475 71.5651 50.3658V68.5965L62.619 61.9186C62.2716 61.6461 61.8159 61.6461 61.4685 61.9186L52.5224 68.5965V50.3658H52.5187ZM73.4104 49.3804C85.5689 42.0269 87.6681 25.181 77.5715 15.0915C73.8101 11.3139 68.6591 8.92497 62.9627 8.68608V0.910788C62.9627 0.418066 62.5593 0 62.0513 0H0.915192C0.422127 0 0.00376892 0.403135 0.00376892 0.910788V78.9959C0.00376892 79.4886 0.407188 79.9067 0.915192 79.9067L62.0513 79.9963C62.5443 79.9963 62.9627 79.5931 62.9627 79.0855V64.4494L71.9461 71.1646C72.5475 71.62 73.4066 71.1646 73.4066 70.433V49.3729L73.4104 49.3804ZM47.8047 16.368C55.6564 8.52184 68.4013 8.52184 76.2716 16.368C84.127 24.2329 84.127 36.9541 76.2716 44.819C68.4013 52.6838 55.6751 52.6838 47.8047 44.819C39.9531 36.9727 39.9531 24.2367 47.8047 16.3718V16.368Z" fill="#1A4D70"/>
-                      <path d="M55.376 30.0896C54.7746 29.0481 56.3621 28.1374 56.9448 29.1788L59.4475 33.52L68.2479 24.7256C69.0883 23.8858 70.3845 25.1624 69.5441 26.0209L59.9032 35.6551C59.4848 36.0732 58.7714 35.9836 58.4613 35.4722L55.376 30.0896Z" fill="#F9572B"/>
-                      <path d="M62.0476 16.7898C69.664 16.7898 75.8721 22.9749 75.8721 30.6046C75.8721 38.2344 69.6826 44.4195 62.0476 44.4195C54.4126 44.4195 48.2232 38.2344 48.2232 30.6046C48.2232 22.9749 54.4126 16.7898 62.0476 16.7898ZM53.5759 39.0892C58.2488 43.7588 65.8465 43.7588 70.5231 39.0892C75.1997 34.4195 75.2147 26.8271 70.5231 22.1351C65.8315 17.443 58.2525 17.4654 53.5759 22.1351C48.8843 26.8047 48.8843 34.3971 53.5759 39.0892Z" fill="#F9572B"/>
-                      <path d="M39.1127 18.0104C40.3192 18.0104 40.3192 16.1851 39.1127 16.1851H20.9627C19.7562 16.1851 19.7562 18.0104 20.9627 18.0104H39.1127Z" fill="#1A4D70"/>
-                      <path d="M41.1747 12.5382C42.3812 12.5382 42.3812 10.7129 41.1747 10.7129H20.9591C19.7526 10.7129 19.7526 12.5382 20.9591 12.5382H41.1747Z" fill="#1A4D70"/>
-                      <path d="M11.1015 9.26831H13.7312C15.8118 9.26831 17.4927 10.9667 17.4927 13.0458V15.655C17.4927 17.7342 15.8118 19.4326 13.7312 19.4326H11.1015C9.03963 19.4326 7.34006 17.7342 7.34006 15.655V13.0458C7.34006 10.9667 9.02096 9.26831 11.1015 9.26831ZM9.14796 15.655C9.14796 16.73 10.0444 17.6072 11.1015 17.6072H13.7312C14.792 17.6072 15.6661 16.73 15.6661 15.655V13.0458C15.6661 11.9708 14.7883 11.0936 13.7312 11.0936H11.1015C10.0407 11.0936 9.16664 11.9708 9.14796 13.0458V15.655Z" fill="#1A4D70"/>
-                      <path d="M34.6752 35.0729C35.8817 35.0729 35.8817 33.2476 34.6752 33.2476H20.9628C19.7563 33.2476 19.7563 35.0729 20.9628 35.0729H34.6752Z" fill="#1A4D70"/>
-                      <path d="M37.0692 29.5968C38.2757 29.5968 38.2757 27.7715 37.0692 27.7715H20.9438C19.7373 27.7715 19.7373 29.5968 20.9438 29.5968H37.0692Z" fill="#1A4D70"/>
-                      <path d="M11.1015 26.3682H13.7312C15.8118 26.3682 17.4927 28.0666 17.4927 30.1457V32.7549C17.4927 34.834 15.8118 36.5324 13.7312 36.5324H11.1015C9.03963 36.5324 7.34006 34.834 7.34006 32.7549V30.1457C7.34006 28.0666 9.02096 26.3682 11.1015 26.3682ZM9.14796 32.7549C9.14796 33.8299 10.0444 34.7071 11.1015 34.7071H13.7312C14.792 34.7071 15.6661 33.8112 15.6661 32.7549V30.1457C15.6661 29.0707 14.7883 28.1935 13.7312 28.1935H11.1015C10.0407 28.1935 9.16664 29.0707 9.14796 30.1457V32.7549Z" fill="#1A4D70"/>
-                      <path d="M42.7284 52.1351C43.9349 52.1351 43.9349 50.3098 42.7284 50.3098H20.944C19.7375 50.3098 19.7375 52.1351 20.944 52.1351H42.7284Z" fill="#1A4D70"/>
-                      <path d="M36.976 46.6593C38.1825 46.6593 38.1825 44.834 36.976 44.834H20.9626C19.7561 44.834 19.7561 46.6593 20.9626 46.6593H36.976Z" fill="#1A4D70"/>
-                      <path d="M11.1015 43.4678H13.7312C15.8118 43.4678 17.4927 45.1662 17.4927 47.2266V49.8545C17.4927 51.915 15.8118 53.6134 13.7312 53.6134H11.1015C9.03963 53.6134 7.34006 51.9336 7.34006 49.8545V47.2266C7.34006 45.1662 9.02096 43.4678 11.1015 43.4678ZM9.14796 49.8731C9.14796 50.9482 10.0444 51.8254 11.1015 51.8254H13.7312C14.792 51.8254 15.6661 50.9295 15.6661 49.8731V47.2453C15.6661 46.1852 14.7883 45.3117 13.7312 45.3117H11.1015C10.0407 45.3117 9.16664 46.1703 9.14796 47.2453V49.8731Z" fill="#1A4D70"/>
-                      <path d="M11.1015 60.5637H13.7312C15.8118 60.5637 17.4927 62.2621 17.4927 64.3412V66.9504C17.4927 69.0296 15.8118 70.728 13.7312 70.728H11.1015C9.03963 70.728 7.34006 69.0296 7.34006 66.9504V64.3412C7.34006 62.2621 9.02096 60.5637 11.1015 60.5637ZM9.14796 66.9504C9.14796 68.0255 10.0444 68.9027 11.1015 68.9027H13.7312C14.792 68.9027 15.6661 68.0255 15.6661 66.9504V64.3412C15.6661 63.2662 14.7883 62.389 13.7312 62.389H11.1015C10.0407 62.389 9.16664 63.2849 9.14796 64.3412V66.9504Z" fill="#1A4D70"/>
-                      <path d="M20.9437 67.5737C19.7372 67.5737 19.7372 69.399 20.9437 69.399H38.7313C39.9379 69.399 39.9379 67.5737 38.7313 67.5737H20.9437Z" fill="#1A4D70"/>
-                      <path d="M20.944 61.8962C19.7375 61.8962 19.7375 63.7215 20.944 63.7215H32.0268C33.2333 63.7215 33.2333 61.8962 32.0268 61.8962H20.944Z" fill="#1A4D70"/>
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_59_418">
-                        <rect width="84" height="80" fill="white" transform="matrix(-1 0 0 1 84 0)"/>
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  <h1>Лучшее в классе оборудование</h1>
-                  <span></span>     
-                  <p>Мы используем только насосы BBA pumps при проведении работ. Все наши установки выпущены не позже 2017 года, в идеальном техническом состоянии.</p>
-            </div>
-            <div class="advantages-card">
-                <svg xmlns="http://www.w3.org/2000/svg" width="74" height="88" viewBox="0 0 74 88" fill="none">
-                    <path d="M32.8434 1.52769C35.3969 -0.0251509 38.6031 -0.0251486 41.1566 1.52769L70.1566 19.1628C72.5432 20.6141 74 23.205 74 25.9982V62.0018C74 64.795 72.5432 67.3859 70.1566 68.8372L41.1566 86.4723C38.6031 88.0251 35.3969 88.0251 32.8434 86.4723L3.84335 68.8372C1.45681 67.3859 0 64.795 0 62.0018V25.9982C0 23.205 1.45681 20.6141 3.84335 19.1628L32.8434 1.52769Z" fill="#EFEFEF"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="79" viewBox="0 0 80 79" fill="none">
-                    <g clip-path="url(#clip0_59_441)">
-                      <path d="M0.324518 40.2841C0.532046 40.4889 0.811265 40.6044 1.10558 40.6044H40C40.2943 40.6044 40.5736 40.4927 40.7811 40.2841C40.9886 40.0792 41.1056 39.8036 41.1056 39.513C41.1169 31.6276 36.4268 24.4163 29.1633 21.1422L28.786 20.9745L29.0803 20.6915C31.4159 18.4417 32.7252 15.4283 32.7667 12.2063C32.8082 8.9843 31.5744 5.94111 29.2954 3.63544C26.9069 1.2143 23.7299 0 20.5528 0C17.3757 0 14.3949 1.13607 12.0215 3.42312C9.6859 5.67292 8.37659 8.68631 8.33508 11.9083C8.29358 15.1303 9.52742 18.1735 11.8065 20.4791C11.8781 20.5499 11.9498 20.6207 12.0215 20.6915L12.3196 20.9745L11.9423 21.1459C4.67882 24.42 -0.0112992 31.6276 2.04446e-05 39.5093C2.04446e-05 39.7999 0.113217 40.0755 0.324518 40.2804V40.2841ZM10.5462 12.0871C10.5424 6.64138 15.025 2.2051 20.5415 2.20138H20.549C26.0617 2.20138 30.5481 6.62648 30.5556 12.0685C30.5556 14.7056 29.518 17.1864 27.6314 19.0563C25.7448 20.9224 23.2318 21.9542 20.5603 21.9542H20.5528C18.6096 21.9542 16.723 21.4029 15.0967 20.3562C12.2555 18.5273 10.5537 15.4357 10.55 12.0871H10.5462ZM2.26396 38.1199C2.80353 31.0353 7.53138 24.9154 14.3081 22.5241L14.4326 22.4794L14.5458 22.5464C18.2474 24.677 22.8507 24.677 26.5522 22.5464L26.6654 22.4794L26.7899 22.5241C33.5667 24.9117 38.2945 31.0353 38.8379 38.1199L38.8605 38.4217H2.24132L2.26396 38.1199Z" fill="#1A4D70"/>
-                      <path d="M51.1123 32.3763C51.282 32.3763 51.4556 32.3354 51.6065 32.2609L62.4848 26.8897H78.8945C79.5058 26.8897 80.0001 26.4017 80.0001 25.7983V3.85902C80.0001 3.56848 79.8869 3.29285 79.6756 3.08798C79.4681 2.88311 79.1888 2.76764 78.8945 2.76764H45.5543C44.9468 2.76764 44.4487 3.2556 44.4487 3.85902V25.802C44.4487 26.4054 44.943 26.8934 45.5543 26.8934H50.0067V31.285C50.0067 31.8884 50.5048 32.3763 51.1123 32.3763ZM46.6636 24.7069V4.9504H77.789V24.7069H62.2244C62.0546 24.7069 61.881 24.7479 61.7301 24.8224L52.2178 29.5157V25.7983C52.2178 25.1949 51.7235 24.7069 51.1123 24.7069H46.6598H46.6636Z" fill="#1A4D70"/>
-                      <path d="M70.5594 10.9956H53.8893C53.278 10.9956 52.7837 11.4836 52.7837 12.087C52.7837 12.6904 53.2818 13.1784 53.8893 13.1784H70.5594C71.1706 13.1784 71.6649 12.6904 71.6649 12.087C71.6649 11.4836 71.1669 10.9956 70.5594 10.9956Z" fill="#1A4D70"/>
-                      <path d="M70.5594 16.4788H53.8893C53.278 16.4788 52.7837 16.9667 52.7837 17.5701C52.7837 18.1736 53.2818 18.6615 53.8893 18.6615H70.5594C71.1706 18.6615 71.6649 18.1736 71.6649 17.5701C71.6649 16.9667 71.1669 16.4788 70.5594 16.4788Z" fill="#1A4D70"/>
-                      <path d="M65.0051 79.0001H78.8982C79.5094 79.0001 80.0037 78.5121 80.0037 77.9087C80.0151 70.0232 75.3249 62.8119 68.0615 59.5378L67.6841 59.3665L67.9785 59.0834C72.8006 54.4385 72.8987 46.7877 68.1935 42.0274C63.4883 37.267 55.7381 37.1702 50.9159 41.8151C48.5803 44.0649 47.271 47.0782 47.2295 50.3002C47.188 53.5222 48.4218 56.5654 50.7008 58.8711C50.7725 58.9418 50.8442 59.0126 50.9159 59.0834L51.2102 59.3665L50.8329 59.5378C43.5694 62.8119 38.8831 70.0232 38.8906 77.905C38.8906 78.1955 39.0038 78.4711 39.2151 78.676C39.4227 78.8809 39.7019 78.9963 39.9962 78.9963H53.8892C54.5005 78.9963 54.9948 78.5047 54.9948 77.905C54.9948 77.3053 54.4967 76.8136 53.8892 76.8136H41.1357L41.1583 76.5119C41.6979 69.4273 46.4258 63.3073 53.2025 60.9197L53.327 60.875L53.4402 60.9421C57.1417 63.0727 61.7451 63.0727 65.4466 60.9421L65.5598 60.875L65.6843 60.9197C72.4611 63.3073 77.1889 69.431 77.7323 76.5156L77.7549 76.8173H65.0014C64.3901 76.8173 63.8958 77.309 63.8958 77.9087C63.8958 78.5084 64.3939 79.0001 65.0014 79.0001H65.0051ZM64.9033 58.7556C63.2468 59.8023 61.3489 60.3238 59.4472 60.3238C57.5455 60.3238 55.6475 59.7986 53.9911 58.7519C51.7498 57.3104 50.2141 55.0978 49.6594 52.5165C49.1048 49.9352 49.6028 47.2943 51.0631 45.0855C52.5195 42.8729 54.7646 41.3569 57.3795 40.8094C59.9943 40.2618 62.6695 40.7535 64.907 42.195C67.1483 43.6328 68.684 45.8491 69.2387 48.4304C69.7934 51.0117 69.2953 53.6526 67.8351 55.8614C67.0691 57.0236 66.0805 57.9995 64.9033 58.7556Z" fill="#1A4D70"/>
-                      <path d="M34.4458 46.646H1.10556C0.498066 46.646 0 47.1377 0 47.7374V69.6804C0 69.9709 0.113197 70.2465 0.324498 70.4514C0.532025 70.6563 0.811244 70.7717 1.10556 70.7717H17.5153L28.3935 76.143C28.6577 76.2733 28.9595 76.2957 29.2387 76.2026C29.518 76.1094 29.7444 75.9157 29.8764 75.655C29.9519 75.506 29.9934 75.3347 29.9934 75.1671V70.7755H34.4458C34.7401 70.7755 35.0193 70.6637 35.2269 70.4551C35.4344 70.2503 35.5514 69.9746 35.5514 69.6841V47.7411C35.5514 47.1377 35.0571 46.6497 34.4458 46.6497V46.646ZM33.3403 68.5853H28.8916C28.2803 68.5853 27.7861 69.0732 27.7861 69.6766V73.3978L18.2737 68.7007C18.119 68.6262 17.9492 68.5853 17.7795 68.5853H2.21111V48.8288H33.3365V68.5853H33.3403Z" fill="#F9572B"/>
-                      <path d="M26.1106 54.8743H9.44052C8.82925 54.8743 8.33496 55.3659 8.33496 55.9656C8.33496 56.5653 8.83303 57.057 9.44052 57.057H26.1106C26.7219 57.057 27.2162 56.5653 27.2162 55.9656C27.2162 55.3659 26.7181 54.8743 26.1106 54.8743Z" fill="#F9572B"/>
-                      <path d="M26.1106 60.3608H9.44052C8.82925 60.3608 8.33496 60.8525 8.33496 61.4522C8.33496 62.0519 8.83303 62.5436 9.44052 62.5436H26.1106C26.7219 62.5436 27.2162 62.0519 27.2162 61.4522C27.2162 60.8525 26.7181 60.3608 26.1106 60.3608Z" fill="#F9572B"/>
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_59_441">
-                        <rect width="80" height="79" fill="white"/>
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  <h1>Бесплатный выезд и консультация</h1>
-                  <span></span>
-                  <p>Бесплатный выезд и консультации в любой точке России, постоянная поддержка и полное сопровождение работ на каждом этапе оказываемых услуг.</p>
-            </div>
-        </div>
-        <div class="advantages-bottom">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1905" height="193" viewBox="0 0 1905 193" fill="none">
-                <path d="M7.49961e-05 34.3316L225.117 184.5L863.95 79.5055L1509.79 193L1921 57.7913L1921 0.000244048L-1.68726e-05 0.000411987L7.49961e-05 34.3316Z" fill="#D8D8D8"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1904" height="275" viewBox="0 0 1904 275" fill="none">
-                <path d="M1920 51.0356L1573 275L914.5 174.038L540 232.692L1.65308e-05 85.9099L2.40412e-05 1.52537e-05L1920 0.000183105L1920 51.0356Z" fill="#EFEFEF"/>
-            </svg>
-        </div>
-    </section>
+            <p class="contacts_txt-footer">Свяжитесь с нами удобным вам способом или оставьте заявку и нашиспециалисты позвонят вам</p>
     
-    <section id="customers">
-        <span>Заказчики</span>
-        <div class="line-staright"></div>
-        <div class="customer-logos">
-            <div class="customer-logo">
-                <img src="images/aarsleff.jpeg" alt="">
-            </div>
-            
-            <div class="customer-logo">
-                <img src="images/megamade.jpeg" alt="">
-            </div>
-            
-            <div class="customer-logo">
-                <img src="images/tehnomet.png" alt="">
-            </div>
-            
-            <div class="customer-logo">
-                <img src="images/stis.svg" alt="">
-            </div>
-        </div>
-    </section>
-
-    <section id="order-form">
-        <span>Закажите консультацию, расчет стоимости работ или выезд специалиста на объект</span>
-        <div class="line-staright"></div>
-        <div class="base-form">
-            <form action="#">
-                <label for="">Ваше имя</label><br>
-                <input type="text"><br>
-                <label for="">Название компании</label><br>
-                <input type="text"><br>
-                <label for="">Телефон *</label><br>
-                <input type="text" name="" id=""><br>
-                <p>Я даю свое согласие на обработку моей персональной информации в соответствии с политикой конфиденциальности</p>
-                <button class="btn">Отправить запрос</button>
+            <form action="" class="filling-application">
+              <label for="name">
+                <span class="title-filling-application">Ваше имя</span>
+                <input class="form_input" id="name" type="text">
+              </label>
+    
+              <label for="name_company">
+                <span class="title-filling-application">Название компании</span>
+                <input class="form_input" id="name_company" type="text">
+              </label>
+    
+              <label for="telephone">
+                <span class="title-filling-application">Телефон</span>
+                <input class="form_input" id="telephone" type="text">
+              </label>
+    
+              <a href="" class="filling-application_txt">Я даю свое согласие на обработку моей персональной информации в соответствии с политикой конфиденциальности</a>
+    
+              <label for="koment"><span class="koment1">Коментарий</span>
+                 <textarea class="form_tekstarea" id="koment" type="text"></textarea>
+              </label>
+    
+              <button type="submit" class="filling-application_buttom">Отправить</button>
             </form>
-        </div>
-
-        <div class="footer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="152" viewBox="0 0 1920 152" fill="none">
-                <path d="M8.88211e-05 122L480.5 40.5L953.5 93.5L1436.5 0L1920 101.5V152L0 152L8.88211e-05 122Z" fill="white"/>
-            </svg>
-
-        </div>
-
-    </section>
-
-    <section id="objects">
-        <h1>
-            Наши объекты
-        </h1>
-
-        <img src="images/Map.svg" alt="">
-    </section>
-
-    <section id="contacts">
-        <span>Контакты</span>
-        <div class="line-staright"></div>
-        <div class="contacts-block">
-
-            <div class="contacts-left">
-                <div>
-                
-                    <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                <path d="M29.3332 8.00016C29.3332 6.5335 28.1332 5.3335 26.6665 5.3335H5.33317C3.8665 5.3335 2.6665 6.5335 2.6665 8.00016V24.0002C2.6665 25.4668 3.8665 26.6668 5.33317 26.6668H26.6665C28.1332 26.6668 29.3332 25.4668 29.3332 24.0002V8.00016ZM26.6665 8.00016L15.9998 14.6668L5.33317 8.00016H26.6665ZM26.6665 24.0002H5.33317V10.6668L15.9998 17.3335L26.6665 10.6668V24.0002Z" fill="white"/>
-                            </svg>
-                            <h1>Cвязь с нами</h1>
-                            <p>8 800 600-15-05</p>
-                            <p>
-                                office@sahara-group.ru</p>
-                    </div>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <g clip-path="url(#clip0_117_1632)">
-                              <path d="M16.1145 -0.0117188C9.555 -0.0117188 4 5.57478 4 12.1928C4 19.1228 10.4385 26.2098 14.7695 31.1908C14.786 31.2108 15.486 31.9883 16.3485 31.9883H16.425C17.2875 31.9883 17.9825 31.2108 18 31.1908C22.0645 26.5183 28 18.8143 28 12.1928C28 5.57478 23.667 -0.0117188 16.1145 -0.0117188ZM16.5155 29.8493C16.4805 29.8843 16.4295 29.9233 16.3845 29.9558C16.3385 29.9243 16.2885 29.8843 16.2515 29.8493L15.7285 29.2478C11.6225 24.5373 6 18.0868 6 12.1928C6 6.66128 10.632 1.98778 16.1145 1.98778C22.9435 1.98778 26 7.11278 26 12.1928C26 16.6673 22.8085 22.6083 16.5155 29.8493ZM16.035 6.04378C12.7215 6.04378 10.035 8.73028 10.035 12.0438C10.035 15.3573 12.7215 18.0438 16.035 18.0438C19.3485 18.0438 22.035 15.3573 22.035 12.0438C22.035 8.73028 19.3485 6.04378 16.035 6.04378ZM16.035 16.0438C13.8295 16.0438 11.9889 14.2058 11.9889 11.9998C11.9889 9.79428 13.7834 7.99978 15.9889 7.99978C18.1959 7.99978 19.9889 9.79428 19.9889 11.9998C19.9899 14.2058 18.242 16.0438 16.035 16.0438Z" fill="white"/>
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_117_1632">
-                                <rect width="32" height="32" fill="white"/>
-                              </clipPath>
-                            </defs>
-                          </svg>
-                          <h1>Наша локация</h1>
-                          <p>Ленинградская область, </p>
-                          <p>Новоприозерское ш.11 км. </p>
-                          <p>Трасса А-121</p>
-                    </div>
+            <div class="line-footer"></div>
+    
+            <div class="footer">
+              <p class="footer_txt">2015 — 2023 г.</p>
+              <img class="footer_pic" src="/img/Logo (3).svg" alt="лого компании">
             </div>
-
-                <div class="contacts-left-info">
-                    <p>Наши менеджеры обработают вашу заявку 
-                        и сразу же свяжутся с вами в рабочее время 9:00 — 18:00 МСК.</p>
-                </div>
-        </div>
-            <div class="contacts-right">
-
-                <p>
-                    Свяжитесь с нами удобным вам способом 
-или оставьте заявку и наши специалисты позвонят вам
-                </p>
-                <div style="display: flex;">
-                    <div>
-                    
-                        <label for="">Ваше имя</label><br>
-                        <input type="text">
-                    </div>
-                    <div>
-                    
-                        <label for="">Название компании</label><br>
-                        <input type="text">
-                    </div>
-                </div>
-                <div style="display: flex;">
-                    <div>
-                    
-                        <label for="">Телефон</label><br>
-                        <input id="phoneInput" type="text">
-
-                        <p>
-                            Я даю свое согласие на обработку моей персональной информации в соответствии с политикой конфиденциальности
-                        </p>
-                    </div>
-                </div>
-                <div class="comment">
-                    <label for="">Комментарий</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                </div>
-            </div>
-        </div>
+          </div>
+         
+      </div>
     </section>
+    
+  </footer>
+
 </body>
+
 </html>
+
+
+
+
