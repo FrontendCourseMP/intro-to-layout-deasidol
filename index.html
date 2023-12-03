@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
   <title>Аренда специализированных насосных станций</title>
-  <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
@@ -25,13 +25,12 @@
   <main class="main">
 
     <section>  
-          <section class="main-str">
-              
+          <div class="main-str">
               <h1></h1>
               <p class="main_title">Аренда специализированных насосных станций</p><p class="main_txt">для водопонижения и водоотведения</p>
               <img src="/img/Bump 1 (2).png" alt="насос" class="nasos">
               <button class="main_button">Заказать звонок</button>
-          </section>
+          </div>
   
           <img src="/img/Graphic (3).svg" alt="" class="grafic">
   
@@ -59,7 +58,6 @@
     <section class="company">
       <div class="wrapper">
         <h2 class="company_title">О компании</h2>
-        <div class="line"></div>
 
         <p class="company_list_txt">Уже более 8 лет специалисты компании Сахара Груп решают задачи любой сложности как в сфере водоотведения при проведении бестраншейного ремонта и строительства наружных сетей водоснабжения, канализации и трубопроводов, так и в сфере водопонижения грунтовых вод и осушения котлованов при строительстве зданий и иных сооружений.</p>
         <p class="company_list_txt">Мы используем в работе высококачественное оборудование признанного мирового лидера в производстве насосов – голландскую компанию BBA pumps. Наши насосные станции отличаются от конкурентов стабильной работой в любых погодных условиях, максимальной эффективностью при минимальном расходе топлива, а также низким уровнем шума (менее 48 дБ), что позволяет использовать их в городских условиях</p>
@@ -90,7 +88,7 @@
     <section class="equipment-info">
       <div class="wrapper">
         <h2 class="equipment-info_title">Наше оборудование</h2>
-        <div class="line"></div>
+        
         <ul class="knopki_slaida">
           <li>
             <button class="equipment-info_button">BA100K D193</button>
@@ -102,23 +100,27 @@
         <p class="equipment-info_txt first">Насосный агрегат ВА100К D193 с максимальной производительностью 190 м3/ч и способностью перекачивать твердые включения диаметром до 82 мм является самой популярной моделью серии BA.</p>
         <p class="equipment-info_txt">Данный насос имеет компактный корпус и низкий уровень шума, благодаря чему его можно использовать даже в густонаселенных районах крупных городов</p>
         <ul>
-          <li> <img src="/img/nasos2.png" alt="насос1" class="equipment-info_pic"><img src="" alt="насос2"><img src="" alt="насос3"></li>
+          <li> <img src="/img/nasos2.png" alt="насос1" class="equipment-info_pic"></li>
+          <li><img src="" alt="насос2"></li>
+          <li><img src="" alt="насос3"></li>
         </ul>
-
-        
+        <div class="pagination-bullets">
+          <button class="pagination-bullet active"></button>
+          <button class="pagination-bullet"></button>
+          <button class="pagination-bullet"></button>
+        </div>        
       </div>
     </section>
 
     <section class="advantages">
       <div class="wrapper">
         <h2 class="advantages_title">Наши преимущества</h2>
-        <div class="line"></div>
 
         <ul class="advantages_list">
           <ol class="advantages_iteam-first">
             <img src="/img/Icon-1.png" alt="грузовик" class="advantages_pic">
             <h3 class="advantages_list_title">Работаем по всей России</h3>
-            <div class="advantages-line"></div>
+            
             <p class="advantages_txt-info">Мы готовы произвести работы в любой точке России в максимально сжатые сроки. Мы ценим время заказчика и организуем доставку на объект самостоятельно вне зависимости от количества оборудования.</p>
           </ol>
 
@@ -127,7 +129,7 @@
             <ol class="advantages_iteam">
               <img src="/img/Icon-2.png" alt="лого достижений " class="advantages_pic">
               <h3 class="advantages_list_title">Лучшее в классе оборудование</h3>
-              <div class="advantages-line"></div>
+              
               <p class="advantages_txt-info">Мы используем только насосы BBA pumps при проведении работ. Все наши установки выпущены не позже 2017 года, в идеальном техническом состоянии.</p>
             </ol>
             
@@ -135,13 +137,12 @@
             <ol class="advantages_iteam">
               <img src="/img/Icon-3.png" alt="лого консультации" class="advantages_pic">
               <h3 class="advantages_list_title">Бесплатный выезд и консультация</h3>
-              <div class="advantages-line"></div>
+              
               <p class="advantages_txt-info">Бесплатный выезд и консультации в любой точке России, постоянная поддержка и полное сопровождение работ на каждом этапе оказываемых услуг.</p>
             </ol>
           </div>
         </ul>
       
-
       </div>
     </section>
     
@@ -154,13 +155,12 @@
 
         <h2 class="customers_title">Заказчики</h2>
 
-        <div class="line-customers"></div>
 
         <ul class="customers_list">
           <li><img src="/img/Aarsleff.svg" alt=" лого arr" class="customers_iteam"></li>
           <li><img src="/img/Megameid.svg" alt="лого megamed" class="customers_iteam"></li>
           <li><img src="/img/Tehnomet.svg" alt="лого technomed" class="customers_iteam"></li>
-          <li><img src="/img/CTIC.svg" alt="лого stis" class="customers_iteam"></li>
+          <li><img src="/img/CTIC.jpg" alt="лого stis" class="customers_iteam"></li>
         </ul>
 
       </div>
@@ -199,18 +199,13 @@
       <div class="wrapper">
 
         <h2 class="geographical_txt">Наши объекты</h2>
-        <div class="line"></div>
+        
         <img src="/img/mother-russia.jpg" alt="карта России" class="geographical_pic">
-
-       
           <div class="container__list">
-            <ul id="list" class="geographical_list-first">
+            <ul id="list" class="geographical_list">
               <li class="geographical_iteam">Екатеринбург</li>
               <li class="geographical_iteam">Москва </li>
               <li class="geographical_iteam">Казань</li>
-            </ul>
-  
-            <ul class="geographical_list_two" >
               <li class="geographical_iteam">Санкт-Петербург</li>
               <li class="geographical_iteam">Краснодар</li>
               <li class="geographical_iteam">Тюмень</li>
@@ -225,8 +220,6 @@
       <div class="wrapper">
           <div class="image-part">
             <h2 class="contacts_txt-title">Контакты</h2>
-            <div class="line"></div>
-  
               <ul class="contacts_list">
                 <li class="contacts_iteam">
                   <img src="/img/mdi_email-outline.svg" alt="картинка почты" class="contacts_pic">
