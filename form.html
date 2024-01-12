@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/form.css">
+    <title>Аренда специализированных насосных станций</title>
+</head>
+
+<body>
+    <header class="">
+        <section class="header">
+            <div class="header__wrapper">
+                <div class="header-wrapper__block">
+                    <img src="/img/Logo.png" alt="" class="header-wrapper__img">
+                    <button class="header-wrapper__button"></button>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="form">
+            <div class="form__wrapper">
+                <form action="//httpbin.org/post" class="forma" method="post">
+                    <h2 class="form-title">Регистрация пользователя</h2>
+                    <fieldset class="fieldset">
+                        <label class="form-label">
+                            <span class="form-span">Имя:</span>
+                            <input type="text" class="form-input" name="name" placeholder="Введите ваше имя" required>
+                        </label>
+                        <label class="form-label">
+                            <span class="form-span">Дата рождения:</span>
+                            <input type="date" class="form-input" name="dob" required>
+                        </label>
+                        <label class="form-label">
+                            <span class="form-span">Пол:</span>
+                        </label>
+                        <label class="form-label">
+                            <input type="radio" class="input-radio" name="gender" required>
+                            <span class="form-span">Мужской</span>
+                        </label>
+                        <label class="form-label">
+                            <input type="radio" class="input-radio" name="gender" required>
+                            <span class="form-span">Женский</span>
+                        </label>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <label class="form-label">
+                            <span class="form-span">Почта:</span>
+                            <input type="email" class="form-input" name="email" placeholder="Введите ваш email"
+                                required>
+                        </label>
+                        <label class="form-label">
+                            <span class="form-span">Пароль:</span>
+                            <input type="password" class="form-input" name="password" placeholder="Введите ваш пароль"
+                                required>
+                        </label>
+                        <label class="form-label">
+                            <span class="form-span">Удобный интервал для связи:</span>
+                            <select class="form-select" name="contact-time">
+                                <option value="morning">8:00 - 18:00</option>
+                                <option value="evening">18:00 - 23:00</option>
+                            </select>
+                        </label>
+                    </fieldset>
+                    <div class="form-button">
+                        <button type="submit" class="form-input">Отправить</button>
+                        <input type="reset" class="form-input" value="Сбросить">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <section class="Contacts">
+            <div class="image-part">
+                <div class="wrapper">
+                    <h2 class="contacts_txt-title">Контакты</h2>
+                    <div class="line"></div>
+                    <div class="orange">
+                        <div class="orange-wrapper">
+
+
+                            <ul class="contacts_list">
+                                <li class="contacts_iteam">
+                                    <img src="/img/mdi_email-outline.svg" alt="картинка почты" class="contacts_pic">
+                                    <h3 class="contacts_txt">Связь с нами</h3>
+                                    <a href="" class="contacts_link">8 800 600-15-05</a>
+                                    <a href="" class="contacts_link">office@sahara-group.ru</a>
+                                </li>
+                                <li class="contacts_iteam">
+                                    <img src="/img/simple-line-icons_location-pin.svg" alt="картинка локации"
+                                        class="contacts_pic">
+                                    <h3 class="contacts_txt">Наша локация</h3>
+                                    <p class="contacts_iteam_txt">Ленинградская область, Новоприозерское ш.11 км. Трасса
+                                        А-121</p>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blue-p">
+                <div class="wrapper">
+                    <div class="gray">
+                        <div class="gray-wrapper">
+                            <ul class="processing_information">
+                                <li class="processing-information_txt">Наши менеджеры обработают вашу заявку и сразу же
+                                    свяжутся с вами в рабочее время 9:00 — 18:00 МСК.</li>
+                            </ul>
+                        </div>
+                        <p class="progcessin_txt">Свяжитесь с нами удобным вам способом или оставьте заявку и наши
+                            специалисты позвонят вам</p>
+                    </div>
+                    <form action="" class="filling-application">
+                        <label for="name">
+                            <span class="title-filling-application">Ваше имя</span>
+                            <input class="form_input-fill" id="name" type="text">
+                        </label>
+
+                        <label for="name_company">
+                            <span class="title-filling-application">Название компании</span>
+                            <input class="form_input-fill" id="name_company" type="text">
+                        </label>
+
+                        <label for="telephone">
+                            <span class="title-filling-application">Телефон</span>
+                            <input class="form_input-fill" id="telephone" type="text">
+                        </label>
+
+                        <a href="" class="filling-application_txt">Я даю свое согласие на обработку моей персональной
+                            информации в соответствии с политикой конфиденциальности</a>
+
+                        <label for="koment"><span class="koment1">Коментарий</span>
+                            <textarea class="form_tekstarea" id="koment" type="text"></textarea>
+                        </label>
+
+                        <button type="submit" class="filling-application_buttom">Отправить</button>
+                    </form>
+                    <div class="footer-line"></div>
+                    <div class="footer">
+                        <p class="footer_txt">2015 — 2023 г.</p>
+                        <a href="/grid.html" class="">лаба7</a>
+                        <img class="footer_pic" src="/img/footer_logo.svg" alt="лого компании">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </footer>
+</body>
+
+</html>
