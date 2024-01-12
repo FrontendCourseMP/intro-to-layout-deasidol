@@ -987,7 +987,7 @@ label {
         margin-left: 10px;
         margin-right: 0%;
     }
-    .send.ho {
+    .send.call{
         grid-row: 2 / 3;
         grid-column: 1 / 2;
         display: grid;
