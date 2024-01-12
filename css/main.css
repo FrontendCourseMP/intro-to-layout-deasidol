@@ -29,6 +29,11 @@ body{
     
 }
 
+
+html, body{
+    font-size: 62.5%;
+}
+
 html{
     box-sizing: border-box;
 }
@@ -58,6 +63,8 @@ html,body{
     background: url(/img/headerrr.svg) no-repeat center;
     background-size: cover;
     height: 150px;  
+    display: flex;
+    justify-content: space-between;
    
     
 }
@@ -83,6 +90,16 @@ main{
     width: 342px;
     z-index: 99;
     height: 150px;
+    display: block;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 342px;
+    margin: 0 auto;
+    margin-top: 20px;
+
+
 }
 
 .header-wrapper__block{
@@ -105,29 +122,44 @@ main{
     background-color: white;
 }
 
+.header-wrapper__img{
+     width: 172px;
+    height: 46px;
+    flex-shrink: 0;
+}
+
 
 .section-1{
     background: url(/img/mai__img.jpg)no-repeat center;
     background-size: cover;
-    height: 730px; 
+    min-height: 700px;
+    max-height: 1100px;
 }
 
 .main__title{
     font-family: Roboto;
     color: var(--two-main-color);
     padding-top: 170px;
-    font-size: 32px;
+    font-size: 0.8rem;
     font-weight: 700;
     line-height: 38px;
     margin-bottom: 4px;
-    max-width: 342px;
+    width: 100%;
     
+}
+a{
+    text-decoration: none;
+}
+
+.gg{
+    position: relative;
+    top: 4px;
 }
 
 .main__txt{
     font-family: Roboto;
     color: var(--two-main-color);
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--White, #FFF);
     font-weight: 500;
     margin-bottom: 42px;
@@ -135,6 +167,8 @@ main{
 
 .main__img{
     margin-bottom: 32px;
+    width: 100vw;
+    max-width: 540px;
 }
 
 .main__button{
@@ -182,7 +216,7 @@ main{
 
 .mai-item__txt{
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -192,11 +226,16 @@ main{
 .main-item__title{
     color: var(--main-color);
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
 }
+
+html,body{
+    font-size: 62.5%;
+}
+
 
 
 
@@ -227,7 +266,7 @@ main{
     font-family: Roboto;
     color: var(--main-color);
     text-align: center;
-    font-size: 36px;
+    font-size: 2.3rem;
     font-weight: 700;
     margin-bottom: 32px;
 }
@@ -242,9 +281,10 @@ main{
 .company-first__txt{
     color: var(--main-color);
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     margin-bottom: 32px;
+    max-width: 600px;
 }
 
 .company-two__txt{
@@ -253,6 +293,7 @@ main{
     font-style: normal;
     font-weight: 400;
     margin-bottom: 32px;
+    max-width: 600px;
 }
 
 
@@ -286,7 +327,7 @@ main{
     color: var(--main-color);
     width: 200px;
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
@@ -297,13 +338,18 @@ main{
 .company-img__block{
     padding-bottom: 40px;
     background-color: #EFEFEF;
+
 }
 
+.company__img{
+    width: 100vw;
+    max-width: 633px;
+}
 .equipment__title{
     color: var(--main-color);
     text-align: center;
     font-family: Roboto;
-    font-size: 36px;
+    font-size: 2.3rem;
     font-weight: 700;
     margin-top: 48px;
     margin-bottom: 32px;
@@ -340,7 +386,7 @@ main{
 .name-equipment{
     color: var(--main-color);
     font-family: Roboto;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 16px;
 
@@ -349,7 +395,7 @@ main{
 .equipment-info_txt-first{
     color: var(--main-color);
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -360,7 +406,7 @@ main{
 .equipment-info_txt{
     color: var(--main-color);
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -384,7 +430,7 @@ main{
     color: var(--two-main-color);
     text-align: center;
     font-family: Roboto;
-    font-size: 36px;
+    font-size: 2.3rem;
     font-weight: 700;
     padding-top: 40px;
     margin-bottom: 32px;
@@ -394,7 +440,9 @@ main{
     position: relative;
     border-radius: 5px;
     height: 380px;
+    width: 100vw;
     background-color:var(--two-main-color);
+    padding-left: 23px;
 }
 
 .advantages__list{
@@ -412,7 +460,7 @@ main{
 .advantages-item__title{
     color: var(--main-color);
     font-family: Roboto;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-left: 32px;
     width: 230px;
@@ -430,9 +478,11 @@ main{
 .advantages-item__txt{
     color: var(--main-color);
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
-    width: 278px;
+
+    width: 100vw;
+    max-width: 270px;
     margin-left: 32px;
     padding-bottom: 300px;
 }
@@ -454,7 +504,7 @@ main{
     font-family: Roboto ;
     text-align: center;
     color: var(--main-color);
-    font-size: 36px;
+    font-size: 2.3rem;
     font-weight: 700;
     margin-bottom: 32px;
 }
@@ -476,7 +526,7 @@ main{
     color: var(--two-main-color);
     text-align: center;
     font-family: Roboto;
-    font-size: 36px;
+    font-size: 2.3rem;
     font-weight: 700;
     padding-top: 30px;
     margin-bottom: 32px;
@@ -505,9 +555,8 @@ main{
 
 span{
     margin-bottom: 2px;
-    color: var(--two-main-color);
     font-family: Roboto;
-    font-size: 14px;
+    font-size: 0.8rem;
     font-weight: 400;
 }
 
@@ -516,7 +565,7 @@ span{
     color:#FFFFFF;
     text-decoration: none;
     font-family: Roboto;
-    font-size: 14px;
+    font-size: 0.8rem;
     font-weight: 400;
 }
 
@@ -543,7 +592,7 @@ span{
     margin: 0 auto;
     text-align: center;
     font-family: Roboto;
-    font-size: 36px;
+    font-size: 2.3rem;
     font-weight: 700;
     margin-bottom: 32px;
     width: 200px;
@@ -564,7 +613,7 @@ span{
     grid-column-gap: 10px;
     color: var(--Blue, #1A4D70);
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     width: 320px;
     margin: 0 auto;
@@ -590,14 +639,15 @@ span{
     color: var(--two-main-color);
     text-align: center;
     font-family: Roboto;
-    font-size: 36px;
+    font-size: 2.3rem;
     font-weight: 700;
     margin-bottom: 32px;
     padding-top: 40px;
 }
 
 .orange{
-    width: 342px;
+    width: 100vw;
+    max-width: 342px;
     height: 317px;
     background-color: #F9572B;
 }
@@ -616,7 +666,7 @@ span{
 .contacts_txt{
     color: var(--two-main-color);
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 900;
     margin-bottom: 4px;
 }
@@ -624,14 +674,14 @@ span{
     display: block;
     text-decoration: none;
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     color: var(--two-main-color);
 }
 
 .contacts_iteam_txt{
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     color: var(--two-main-color);
     max-width: 225px;
@@ -640,11 +690,13 @@ span{
 .blue-p{
     background-color: var(--main-color);
 
+
 }
 .gray{
-    width: 342px;
-    height: 112px;
+
     background-color: #777;
+    height: 100px;
+
 
 }
 .gray-wrapper{
@@ -656,7 +708,7 @@ span{
     padding-top: 32px;
     color: var(--White, #FFF);
     font-family: Roboto;
-    font-size: 14px;
+    font-size: 0.8rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -666,7 +718,7 @@ span{
     display: block;
     color: var(--White, #FFF);
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     margin-top: 70px;
 }
@@ -684,7 +736,7 @@ span{
     text-decoration: none;
     color: #FFF;
     font-family: Roboto;
-    font-size: 14px;
+    font-size: 0.8rem;
     font-weight: 400;
     margin-top: 8px;
     margin-bottom: 24px;
@@ -693,7 +745,7 @@ span{
 
 .form_input-fill{
     margin-bottom: 24px;
-    width: 342px;
+    
     height: 43px;
     padding: 12px 40px;
     justify-content: center;
@@ -701,6 +753,21 @@ span{
     gap: 10px;
     border-radius: 5px;
     border: none;
+    width: 100vw;
+    max-width: 342px;
+}
+
+.form_input-fil{
+    height: 43px;
+    padding: 12px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 100vw;
+    max-width: 342px;
+
 }
 
 
@@ -711,7 +778,8 @@ span{
 
 .form_tekstarea{
     display: flex;
-    width: 342px;
+    width: 100vw;
+    max-width: 342px;
     height: 180px;
     padding: 12px 40px;
     justify-content: center;
@@ -723,9 +791,10 @@ span{
 .koment1{
     color: #FFF;
     font-family: Roboto;
-    font-size: 14px;
+    font-size: 0.8rem;
     font-weight: 400;
 }
+
 
 
 .filling-application_buttom{
@@ -749,7 +818,8 @@ span{
 }
 
 .footer-line{
-    width: 342px;
+    max-width: 342px;
+    width: 100vw;
     height: 1px;
     background-color: #777;
     margin-top: 52px;
@@ -758,7 +828,7 @@ span{
 .footer_txt{
     color: #FFFFFF;
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -791,6 +861,10 @@ a:hover{
 
 }
 
+.skip-link{
+    transform: translateY(-100%);
+}
+
 button:hover{
     transition: 0.97s;
 	transform: scale(1.2, 1.2);
@@ -811,6 +885,407 @@ button:active{
 button:focus{
     color: #1A4D70;
 }
+
+.objects__img{
+    width: 100%;
+    width: 100vw;
+    max-width: 1182px;
+}
+.img_c{
+    display: flex;
+    justify-content: center;
+}
+
+.n{
+    color: var(--two-main-color);
+}
+
+@media(min-width: 1172px){
+    .footer-line{
+        display: none;
+    }
+
+    .progcessin_txt{
+        display: none;
+    }
+    .title-filling-application{
+        color: var(--main-color);
+    }
+    .koment1{
+        color: var(--main-color);
+    }
+
+    .filling-application_txt{
+        color: var(--main-color);
+    }
+  
+
+    
+
+    .filling-application_buttom{
+        position: relative;
+        top: 190px;
+        right: 338px;
+    
+        width: 120px;
+        height: 30px;
+        padding: 12px 40px;
+
+    }
+
+   
+
+    .whitee{
+        position: relative;
+        z-index: 98;
+        background-color: #EFEFEF;
+        width: 100vw;
+        max-width:  1000px;
+        height: 600px;
+    
+    }
+
+    .na{
+        margin-right: 10px;
+    
+    }
+
+    .blue-p{
+        
+    }
+
+    .title-filling-application{
+        display: block;
+    }
+
+    
+
+
+
+   
+    
+    .filling-application{
+        max-width: 200px;
+        position: relative;
+        bottom: 575px;
+        left: 400px;
+    }
+    .wrapper{
+        max-width: 1264px;
+    }
+    .main__title{
+        text-align: left;
+        width: 515px;
+        position: relative;
+        top: 180px;
+        font-size: 48px;
+        color: var(--White, #FFF);
+
+        font-family: Roboto;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    
+
+    }
+    .main__button{
+        position: relative;
+        
+    }
+    .main__txt{
+        position: relative;
+        top: 180px;
+        color: var(--White, #FFF);
+        font-family: Roboto;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+    }
+    .main__button{
+        position: relative;
+        right: 540px;
+        bottom: 250px;
+    }
+
+
+
+    .img_c{
+        justify-content: right;
+
+    }
+    .main__list{
+        flex-direction: row;
+        margin-left: 290px;
+    }
+    .company__title{
+        text-align: left;
+    }
+    .line{
+        margin: 0;
+        margin-bottom: 32px;
+    }
+    .company__list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 80px
+        ;
+        position: relative;
+        bottom: 120px;
+    }
+
+    .flexx{
+     
+       
+        
+        display: flex;
+        
+    
+        flex-wrap:wrap;
+    }
+
+    .company-img__block{
+        position: relative;
+        bottom: 300px;
+    }
+
+    .company{
+        min-height:600px;
+    }
+    .equipment__title{
+        text-align: left;
+    }
+
+    .equipment__list{
+        display: flex;
+        justify-content: center;
+    }
+    .company__img{
+        display: block;
+
+        width: 100vw;
+        max-width: 500px;
+    }
+    .company-img__block{
+        width: 100vw;
+        max-width: 500px;
+        overflow: hidden;
+        display: flex;
+    }
+    .ad{
+        display: flex;
+        justify-content: space-between;
+    }
+  
+    .equipment-info_txt-first{
+        width: 508px;
+    }
+
+    .equipment-info_txt{
+        width: 508px;
+    }
+    .block__ad{
+        padding-top: 20px;
+    }
+   
+
+
+}
+
+.company__title{
+    padding-top: 32px;
+}
+
+
+@media(min-width: 800px){
+
+   
+    .advantages__item{
+        width: 384px;
+        height: 445px;
+    }
+    .advantages__list{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .blue{
+        display: none;
+    }
+
+    .advantages{
+        height: 500px;
+    }
+
+    .equipment__title{
+        text-align: center;
+    }  
+    .line{
+        margin: 0 auto;
+        margin-bottom: 32px;
+    } 
+    .customers__list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+    .objects__block{
+        display: none;
+    }
+    .consultation__form{
+        margin: 0 auto;
+        justify-content: center;
+        max-width: 400px;
+    }
+
+    .form_input{
+        width: 100vw;
+        max-width: 470px;
+    }
+    .gray{
+        width: 375px;
+        height: 142px;
+
+    }
+    .orange{
+        max-width: 375px;
+        height: 381px;
+    }
+    .header-wrapper__button{
+        display: none;
+    }
+
+    .header__block{
+        display: flex;
+        margin: 0 auto;
+        justify-content: baseline;
+        align-items: baseline;
+        align-content: center;
+    }
+    .header_nav{
+        flex-wrap: wrap;
+        position: relative;
+        bottom: 13px;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 60px;
+        align-content: center;
+        align-items: center;
+        
+    }
+    .header-nav_item{
+        color: var(--Blue, #1A4D70);
+
+        /* Roboto Medium 16 */
+        font-family: Roboto;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+       
+    }
+
+    .header-nav_item_nomber{
+        color: var(--Orange, #F9572B);
+
+        /* Roboto Black 16 */
+        font-family: Roboto;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+    }
+
+  
+
+    .gray{
+        position: relative;
+        z-index: 99;
+    }
+
+    .filling-application{
+        position: relative;
+        z-index: 99;
+        max-width: 583px;
+        max-height: 550px;
+    }
+
+    .form_input-fill{
+        max-width: 280px;
+    }
+    .form_input-fil{
+        width: 100vw;
+        max-width: 590px;
+    }
+
+    
+
+
+}
+
+@media(max-width: 391px){
+    .header_nav{
+        display: none;
+    }
+    .footer-line{
+        display: none;
+    }
+}
+
+@media( min-width: 391px){
+    .header-wrapper__button{
+        display: none;
+    }
+}
+
+@media( max-width: 1253px){
+
+    .company__list{
+        margin-top: 200px;
+    }
+    .company-img__block{
+        margin-top: 250px;
+    }
+    .company{
+        height: 1100px;
+    }
+
+    
+}
+
+@media( max-width: 1160px){
+    .company{
+        height: 1650px;
+    }
+    .company__list{
+        margin-top: 0;
+    }
+    .company-img__block{
+        margin-top: 0;
+    }
+    .blue{
+        display: block;
+    }
+    .advantages__item{
+        width: 350px;
+        height: 380px;
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 
