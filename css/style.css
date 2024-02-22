@@ -1,0 +1,348 @@
+:root{
+    --first-color:white;
+    --second-color:rgb(249, 87, 43);
+    --third-color:rgb(26, 77, 112);
+    --fourth-color:rgb(239, 239, 239);
+}
+/* roboto-regular - cyrillic_latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/roboto-v30-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* roboto-500 - cyrillic_latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./fonts/roboto-v30-cyrillic_latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+  /* roboto-700 - cyrillic_latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/roboto-v30-cyrillic_latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+body{
+    font-family: Roboto;
+   
+    
+}
+
+
+html, body{
+    font-size: 62.5%;
+}
+
+html{
+    box-sizing: border-box;
+}
+.header{
+    
+}
+.header__wrapper{
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    /* position: absolute; */
+    background: url(../img/header.png) no-repeat center;
+    background-size: cover;
+    height: 150px;  
+    display: flex;
+    justify-content: space-between;
+}
+.header__logo {
+}
+.logo {
+}
+.logo__picture {
+}
+.header__nav {
+}
+.nav {
+}
+.nav__picture {
+}
+.hero {
+}
+.hero__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+.visually__hidden {
+}
+.hero__title {
+    color: var(--first-color);
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 3.8rem;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 4rem;
+}
+.title {
+}
+.title__span {
+    font-size: 1.6rem;
+}
+.hero__picture {
+}
+.hero__button {
+    padding: 1.2rem 4rem 1.2rem 4rem;
+    border-radius: 4px; 
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: var(--second-color);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    letter-spacing: 0%;
+    text-align: center;
+    color:var(--first-color)
+}
+.contacts {
+}
+.contacts__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.contacts__contact {
+}
+.contact {
+}
+.contacts__picture {
+}
+.contacts__subtitle {
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 1.9rem;
+    letter-spacing: 0%;
+    text-align: left;
+    color:var(--third-color)  
+}
+.contacts__text {
+}
+.info {
+}
+.info__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.info__title {
+}
+.info__line {
+}
+.info__text {
+}
+.info__capabilities {
+}
+.capabilities {
+}
+.capabilities__card {
+}
+.card {
+}
+.card__picture {
+}
+.card__sign {
+}
+.info__image {
+}
+.equipment {
+}
+.equipment__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.equipment__title {
+}
+.equipment__line {
+}
+.equipment__list {
+}
+.list {
+}
+.list__elem {
+}
+.elem {
+}
+.elem__button {
+}
+.equipment__subtitle {
+}
+.equipment__text {
+}
+.equipment__picture {
+}
+.equipment__lines {
+}
+.advantages {
+}
+.advantages__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.advantages__title {
+}
+.advantages__lines {
+}
+.advantages__frames {
+}
+.frames {
+}
+.frames__frame {
+}
+.frame {
+}
+.frame__picture {
+}
+.frame__subtitle {
+}
+.frame__line {
+}
+.frame__text {
+}
+.customers {
+}
+.customers__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.customers__title {
+}
+.customers__line {
+}
+.customers__customer {
+}
+.customer {
+}
+.customer__customerlink {
+}
+.customerlink {
+}
+.customerlink__picture {
+}
+.order {
+}
+.order__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.order__title {
+}
+.order__line {
+}
+.order__form {
+}
+.form {
+}
+.form__label {
+}
+.label {
+}
+.label__span {
+}
+.label__input {
+}
+.form__text {
+}
+.form__button {
+}
+.objects {
+}
+.objects__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.objects__title {
+}
+.objects__line {
+}
+.objects__picture {
+}
+.objects__cities {
+}
+.cities {
+}
+.cities__city {
+}
+.communication {
+}
+.communication__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.communication__title {
+}
+.communication__line {
+}
+.communication__connect {
+}
+.connect {
+}
+.connect__img {
+}
+.connect__subtitle {
+}
+.connect__text {
+}
+.communication__feedback {
+}
+.feedback {
+}
+.feedback__text {
+}
+.request {
+}
+.request__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.request__forma {
+}
+.forma {
+}
+.forma__title {
+}
+.forma__label {
+}
+.label__text {
+}
+.forma__button {
+}
+.footer {
+}
+.footer__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.footer__line {
+}
+.footer__container {
+}
+.container {
+}
+.container__cite {
+}
+.container__link {
+}
+.link {
+}
+.link__logo {
+}
