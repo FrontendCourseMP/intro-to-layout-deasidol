@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сахара Груп</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
 </head>
 
 <body>
@@ -33,15 +34,19 @@
     <section class="contacts">
         <div class="contacts__wrapper">
             <div class="contacts__contact contact">
-                <img src="img/mail.svg" alt="знак почты" class="contacts__picture">
-                <h3 class="contacts__subtitle">Связь с нами</h3>
-                <p class="contacts__text">8 800 600-15-05</p>
-                <p class="contacts__text">office@sahara-group.ru</p>
+                <img src="img/mail.svg" alt="знак почты" class="contact__picture">
+                <div class="contact__text-wrapper">
+                    <h3 class="contact__subtitle">Связь с нами</h3>
+                    <p class="contact__text">8 800 600-15-05</p>
+                    <p class="contact__text">office@sahara-group.ru</p>
+                </div>
             </div>
             <div class="contacts__contact contact">
-                <img src="img/geolocation.svg" alt="знак геолокации" class="contacts__picture">
-                <h3 class="contacts__subtitle">Наша локация</h3>
-                <p class="contacts__text">Ленинградская область, Новоприозерское ш.11 км.Трасса А-121</p>
+                <img src="img/geolocation.svg" alt="знак геолокации" class="contact__picture">
+                <div class="contact__text-wrapper">
+                    <h3 class="contact__subtitle">Наша локация</h3>
+                    <p class="contact__text">Ленинградская область, Новоприозерское ш.11 км.Трасса А-121</p>
+                </div>
             </div>
         </div>
     </section>
@@ -72,17 +77,17 @@
                     <p class="card__sign">Лет на рынке водопонижения</p>
                 </div>
             </div>
+            <img src="img/bump 2.jpg" alt="насосная станция" class="info__image">
         </div>
-        <img src="img/bump 2.jpg" alt="насосная станция" class="info__image">
     </section>
     <section class="equipment">
         <div class="equipment__wrapper">
             <h2 class="equipment__title">Наше оборудование</h2>
             <img src="img/line1.svg" alt="оранжевая линия" class="equipment__line">
             <ul class="equipment__list list">
-                <li class="list__elem elem"><button class="elem__button"></button></li>
-                <li class="list__elem elem"><button class="elem__button"></button></li>
-                <li class="list__elem elem"><button class="elem__button"></button></li>
+                <li class="list__elem elem"><button class="elem__button">BA100K D193</button></li>
+                <li class="list__elem elem"><button class="elem__button">BA150E D285</button></li>
+                <li class="list__elem elem"><button class="elem__button">BA180E D328</button></li>
             </ul>
             <h3 class="equipment__subtitle">BA100K D193</h3>
             <p class="equipment__text">Насосный агрегат ВА100К D193 с максимальной производительностью 190 м3/ч и
@@ -98,7 +103,7 @@
     <section class="advantages">
         <div class="advantages__wrapper">
             <h2 class="advantages__title">Наши преимущества</h2>
-            <img src="img/line1.svg" alt="оранжевая линия" class="advantages__lines">
+            <img src="img/line1.svg" alt="оранжевая линия" class="advantages__line">
             <div class="advantages__frames frames">
                 <div class="frames__frame frame">
                     <img src="img/znakdostavki.svg" alt="знак доставки" class="frame__picture">
@@ -164,7 +169,7 @@
                 </label>
                 <p class="form__text">Я даю свое согласие на обработку моей персональной информации в соответствии с
                     политикой конфиденциальности</p>
-                <button class="form__button"></button>
+                <button class="form__button">Отправить запрос</button>
             </form>
         </div>
     </section>
@@ -188,13 +193,17 @@
             <h2 class="communication__title">Контакты</h2>
             <img src="img/line1.svg" alt="Оранжевая линия" class="communication__line">
             <div class="communication__connect connect">
-                <img src="img/znakpisma.svg" alt="знак письма" class="connect__img">
-                <h3 class="connect__subtitle">Связь с нами</h3>
-                <p class="connect__text">8 800 600-15-05</p>
-                <p class="connect__text">office@sahara@group.ru</p>
-                <img src="img/znakgeolocation.svg" alt="знак геолокации" class="connect__img">
-                <h3 class="connect__subtitle">Наша локация</h3>
-                <p class="connect__text">Ленинградская область, Новоприозерское ш.11км.Трасса А-121</p>
+                <div class="connect__contacts">
+                    <img src="img/znakpisma.svg" alt="знак письма" class="connect__img">
+                    <h3 class="connect__subtitle">Связь с нами</h3>
+                    <p class="connect__text">8 800 600-15-05</p>
+                    <p class="connect__text">office@sahara@group.ru</p>
+                </div>
+                <div class="connect__locaion">
+                    <img src="img/znakgeolocation.svg" alt="знак геолокации" class="connect__img">
+                    <h3 class="connect__subtitle">Наша локация</h3>
+                    <p class="connect__text">Ленинградская область, Новоприозерское ш.11км.Трасса А-121</p>
+                </div>
             </div>
             <div class="communication__feedback feedback">
                 <p class="feedback__text">Наши менеджеры обработают вашу заявку и сразу же свяжутся с вами в рабочее
@@ -223,7 +232,7 @@
                 </label>
                 <label for="" class="forma__label label">
                     <span class="label__span">Комментарий</span>
-                    <input type="text" class="label__input">
+                    <input type="text" class="label__input label__input--comm">
                 </label>
                 <button class="forma__button">Отправить</button>
             </form>
@@ -233,9 +242,9 @@
         <div class="footer__wrapper">
             <img src="img/serayaline.svg" alt="серая линия" class="footer__line">
             <div class="footer__container container">
-                <cite class="container__cite"></cite>
+                <cite class="container__cite">2015 — 2023 г.</cite>
                 <a href="" class="container__link link">
-                    <img src="" alt="Логотип компании" class="link__logo">
+                    <img src="img/logofooter.svg" alt="Логотип компании" class="link__logo">
                 </a>
             </div>
         </div>

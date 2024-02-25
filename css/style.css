@@ -1,83 +1,107 @@
-:root{
-    --first-color:white;
-    --second-color:rgb(249, 87, 43);
-    --third-color:rgb(26, 77, 112);
-    --fourth-color:rgb(239, 239, 239);
+:root {
+    --first-color: white;
+    --second-color: rgb(249, 87, 43);
+    --third-color: rgb(26, 77, 112);
+    --fourth-color: rgb(239, 239, 239);
 }
+
 /* roboto-regular - cyrillic_latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    src: url('./fonts/roboto-v30-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* roboto-500 - cyrillic_latin */
+    src: url('./fonts/roboto-v30-cyrillic_latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* roboto-500 - cyrillic_latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
-    src: url('./fonts/roboto-v30-cyrillic_latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('./fonts/roboto-v30-cyrillic_latin-500.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-  /* roboto-700 - cyrillic_latin */
+
+/* roboto-700 - cyrillic_latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
-    src: url('/fonts/roboto-v30-cyrillic_latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('/fonts/roboto-v30-cyrillic_latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-body{
+body {
     font-family: Roboto;
-   
-    
+
+
 }
 
 
-html, body{
+html,
+body {
     font-size: 62.5%;
 }
 
-html{
+html {
     box-sizing: border-box;
 }
-.header{
-    
-}
-.header__wrapper{
+
+.header {}
+
+.header__wrapper {
     width: 100%;
     margin: 0 auto;
-    padding: 1rem;
-    /* position: absolute; */
+    padding: 1rem 2rem;
     background: url(../img/header.png) no-repeat center;
     background-size: cover;
-    height: 150px;  
+    height: 150px;
     display: flex;
     justify-content: space-between;
 }
-.header__logo {
-}
-.logo {
-}
-.logo__picture {
-}
-.header__nav {
-}
-.nav {
-}
-.nav__picture {
-}
-.hero {
-}
+
+.header__logo {}
+
+.logo {}
+
+.logo__picture {}
+
+.header__nav {}
+
+.nav {}
+
+.nav__picture {}
+
+.hero {}
+
 .hero__wrapper {
+    background: url(../img/wrapper1.jpg) no-repeat center;
+    background-size: cover;
     width: 100%;
     margin: 0 auto;
     padding: 4rem 2rem;
 }
+
 .visually__hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+
 }
+
 .hero__title {
     color: var(--first-color);
     font-size: 3.2rem;
@@ -87,16 +111,21 @@ html{
     text-align: left;
     margin-bottom: 4rem;
 }
-.title {
-}
+
+.title {}
+
 .title__span {
     font-size: 1.6rem;
 }
+
 .hero__picture {
+    margin: 0 auto 3.6rem auto;
+    display: block;
 }
+
 .hero__button {
     padding: 1.2rem 4rem 1.2rem 4rem;
-    border-radius: 4px; 
+    border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background: var(--second-color);
     font-size: 1.6rem;
@@ -104,46 +133,58 @@ html{
     line-height: 1.9rem;
     letter-spacing: 0%;
     text-align: center;
-    color:var(--first-color)
+    color: var(--first-color);
+    margin: 0rem auto 4rem auto;
+    display: block;
 }
-.contacts {
-}
+
+.contacts {}
+
 .contacts__wrapper {
     width: 100%;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 4rem 6rem;
 }
-.contacts__contact {
+
+.contacts__contact {}
+
+.contact {}
+
+.contact__picture {
+    display: block;
 }
-.contact {
-}
-.contacts__picture {
-}
-.contacts__subtitle {
+
+.contact__subtitle {
     font-size: 1.6rem;
     font-weight: 900;
     line-height: 1.9rem;
     letter-spacing: 0%;
     text-align: left;
-    color:var(--third-color);
+    color: var(--third-color);
     margin-bottom: 0.6rem;
 }
-.contacts__text {
+
+.contact__text {
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 1.9rem;
     letter-spacing: 0%;
     text-align: left;
-    color:var(--third-color);
+    color: var(--third-color);
     margin-bottom: 0.5rem;
 }
+
 .info {
+    
 }
+
 .info__wrapper {
+    background-color: var(--fourth-color);
     width: 100%;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
+
 .info__title {
     font-size: 3.6rem;
     font-weight: 700;
@@ -153,27 +194,41 @@ html{
     color: var(--third-color);
     margin-bottom: 3rem;
 }
+
 .info__line {
+    display: block;
+    margin: 0rem auto 3rem auto;
 }
+
 .info__text {
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.9rem;
     letter-spacing: 0%;
     text-align: left;
-    color:var(--third-color);
+    color: var(--third-color);
     margin-bottom: 3rem;
 }
+
 .info__capabilities {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
 }
-.capabilities {
-}
+
+.capabilities {}
+
 .capabilities__card {
+    margin-bottom: 4rem;
 }
-.card {
-}
+
+.card {}
+
 .card__picture {
+    display: block;
+    margin-bottom: 1rem;
 }
+
 .card__sign {
     font-size: 1.6rem;
     font-weight: 900;
@@ -181,17 +236,22 @@ html{
     letter-spacing: 0%;
     text-align: left;
     color: var(--third-color);
-    margin-bottom: 6.5rem;
 }
+
 .info__image {
+    display: block;
+    margin: 0rem auto 4rem auto;
 }
-.equipment {
-}
+
+.equipment {}
+
 .equipment__wrapper {
+    background-color: var(--first-color);
     width: 100%;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
+
 .equipment__title {
     font-size: 3.6rem;
     font-weight: 700;
@@ -201,18 +261,34 @@ html{
     color: var(--third-color);
     margin-bottom: 3.2rem;
 }
+
 .equipment__line {
+    display: block;
+    margin: 0rem auto 3rem auto;
 }
+
 .equipment__list {
+    margin-bottom: 5rem;
 }
-.list {
-}
-.list__elem {
-}
-.elem {
-}
+
+.list {}
+
+.list__elem {}
+
+.elem {}
+
 .elem__button {
+    width: 13rem;
+    height: 5rem;
+    background-color: var(--fourth-color);
+    color: var(--third-color);
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 1.9rem;
+    letter-spacing: 0%;
+    text-align: left;
 }
+
 .equipment__subtitle {
     font-size: 2.4rem;
     font-weight: 700;
@@ -222,6 +298,7 @@ html{
     color: var(--third-color);
     margin-bottom: 1.6rem;
 }
+
 .equipment__text {
     font-size: 1.6rem;
     font-weight: 400;
@@ -231,17 +308,27 @@ html{
     color: var(--third-color);
     margin-bottom: 4rem;
 }
+
 .equipment__picture {
+    display: block;
+    margin: 0rem auto 4rem auto;
 }
+
 .equipment__lines {
+    display: block;
+    margin: 0rem auto 5rem auto;
 }
-.advantages {
-}
+
+.advantages {}
+
 .advantages__wrapper {
+    background: url(../img/advantageswrapper.png) no-repeat center;
+    background-size: cover;
     width: 100%;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
+
 .advantages__title {
     font-size: 3.6rem;
     font-weight: 700;
@@ -251,18 +338,32 @@ html{
     color: var(--first-color);
     margin-bottom: 3.2rem;
 }
-.advantages__lines {
+
+.advantages__line {
+    display: block;
+    margin: 0rem auto 3rem auto;
 }
+
 .advantages__frames {
+    margin-bottom: 16rem;
 }
-.frames {
-}
+
+.frames {}
+
 .frames__frame {
+    background-color: var(--first-color);
+    padding: 3rem;
+    margin-bottom: 2rem;
+    border-radius: 0.8rem;
 }
-.frame {
-}
+
+.frame {}
+
 .frame__picture {
+    display: block;
+    margin-bottom: 4rem;
 }
+
 .frame__subtitle {
     font-size: 2.4rem;
     font-weight: 700;
@@ -272,8 +373,12 @@ html{
     color: var(--third-color);
     margin-bottom: 1.6rem;
 }
+
 .frame__line {
+    display: block;
+    margin-bottom: 1.6rem;
 }
+
 .frame__text {
     font-size: 1.6rem;
     font-weight: 400;
@@ -282,13 +387,15 @@ html{
     text-align: left;
     color: var(--third-color);
 }
-.customers {
-}
+
+.customers {}
+
 .customers__wrapper {
     width: 100%;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
+
 .customers__title {
     font-size: 3.6rem;
     font-weight: 700;
@@ -298,55 +405,81 @@ html{
     color: var(--third-color);
     margin-bottom: 3.2rem;
 }
+
 .customers__line {
+    display: block;
+    margin: 0rem auto 4rem auto;
 }
+
 .customers__customer {
+    margin-bottom: 8rem;
 }
-.customer {
-}
-.customer__customerlink {
-}
-.customerlink {
-}
+
+.customer {}
+
+.customer__customerlink {}
+
+.customerlink {}
+
 .customerlink__picture {
+    display: block;
 }
-.order {
-}
+
+.order {}
+
 .order__wrapper {
+    background: url(../img/orderwrapper.jpg) no-repeat center;
+    background-size: cover;
     width: 100%;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
+
 .order__title {
     font-size: 3.6rem;
     font-weight: 700;
     line-height: 4.2rem;
     letter-spacing: 0%;
     text-align: center;
-    color: var(--third-color);
+    color: var(--first-color);
     margin-bottom: 3.2rem;
 }
+
 .order__line {
+    display: block;
+    margin: 0rem auto 5rem auto;
 }
+
 .order__form {
+    margin-bottom: 9rem;
 }
-.form {
-}
-.form__label {
-}
-.label {
-}
+
+.form {}
+
+.form__label {}
+
+.label {}
+
 .label__span {
+    color: var(--first-color);
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.6rem;
     letter-spacing: 0%;
     text-align: left;
-    color: var(--first-color);
     margin-bottom: 0.4rem;
 }
+
 .label__input {
+    padding: 1.2rem 4rem;
+    margin-bottom: 0.8rem;
 }
+
+.label__input--comm {
+    min-height: 18rem;
+    margin-bottom: 2rem;
+}
+
 .form__text {
     font-size: 1.4rem;
     font-weight: 400;
@@ -356,15 +489,27 @@ html{
     color: var(--first-color);
     margin-bottom: 4rem;
 }
+
 .form__button {
+    padding: 1.2rem 4rem;
+    background-color: var(--second-color);
+    color: var(--first-color);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    letter-spacing: 0%;
+    text-align: center;
 }
-.objects {
-}
+
+.objects {}
+
 .objects__wrapper {
+    background-color: var(--first-color);
     width: 100%;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
+
 .objects__title {
     font-size: 3.6rem;
     font-weight: 700;
@@ -374,14 +519,21 @@ html{
     color: var(--third-color);
     margin-bottom: 3.2rem;
 }
+
 .objects__line {
+    display: block;
+    margin: 0rem auto 3.8rem auto;
 }
+
 .objects__picture {
+    display: block;
+    margin: 0rem auto 1.6rem auto;
 }
-.objects__cities {
-}
-.cities {
-}
+
+.objects__cities {}
+
+.cities {}
+
 .cities__city {
     font-size: 1.6rem;
     font-weight: 500;
@@ -391,13 +543,17 @@ html{
     color: var(--third-color);
     margin-bottom: 1rem;
 }
-.communication {
-}
+
+.communication {}
+
 .communication__wrapper {
+    background: url(../img/communicationwrapper.jpg) no-repeat center;
+    background-size: cover;
     width: 100%;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
+
 .communication__title {
     font-size: 3.6rem;
     font-weight: 700;
@@ -407,14 +563,31 @@ html{
     color: var(--first-color);
     margin-bottom: 3.2rem;
 }
+
 .communication__line {
+    display: block;
+    margin: 0rem auto 3rem auto;
 }
+
 .communication__connect {
+    background-color: var(--second-color);
+    padding: 3.2rem;
+    margin-bottom: 0.4rem;
 }
-.connect {
+
+.connect {}
+
+.connect__contacts {
+    margin-bottom: 2.4rem;
 }
+
+.connect__location {}
+
 .connect__img {
+    display: block;
+    margin-bottom: 1rem;
 }
+
 .connect__subtitle {
     font-size: 1.6rem;
     font-weight: 900;
@@ -424,6 +597,7 @@ html{
     color: var(--first-color);
     margin-bottom: 0.4rem;
 }
+
 .connect__text {
     font-size: 1.6rem;
     font-weight: 500;
@@ -431,12 +605,17 @@ html{
     letter-spacing: 0%;
     text-align: left;
     color: var(--first-color);
-    margin-bottom: 1rem;
+    margin-bottom: 0.4rem;
 }
+
 .communication__feedback {
+    background-color: rgb(119, 119, 119);
+    padding: 3.2rem;
+    margin-bottom: 4rem;
 }
-.feedback {
-}
+
+.feedback {}
+
 .feedback__text {
     font-size: 1.4rem;
     font-weight: 400;
@@ -445,65 +624,87 @@ html{
     text-align: left;
     color: var(--first-color);
 }
-.request {
-}
+
+.request {}
+
 .request__wrapper {
+    background-color: var(--third-color);
     width: 100%;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
-.request__forma {
-}
-.forma {
-}
+
+.request__forma {}
+
+.forma {}
+
 .forma__title {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 500;
-    line-height: 19px;
+    line-height: 1.9rem;
     letter-spacing: 0%;
     text-align: left;
     color: var(--first-color);
     margin-bottom: 2.4rem;
 }
+
 .forma__label {
+    display: block;
+    margin-bottom: 2.4rem;
 }
+
 .label__text {
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 400;
-    line-height: 16px;
+    line-height: 1.6rem;
     letter-spacing: 0%;
     text-align: left;
     color: var(--first-color);
+
 }
+
 .forma__button {
-    padding: 12px 40px 12px 40px;
+    padding: 1.2rem 4rem;
     border-radius: 4px;
     background: var(--second-color);
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 500;
-    line-height: 19px;
+    line-height: 1.9rem;
     letter-spacing: 0%;
     text-align: center;
     color: var(--first-color);
+    margin-bottom: 4rem;
 }
-.footer {
-}
+
+.footer {}
+
 .footer__wrapper {
     width: 100%;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--third-color);
 }
+
 .footer__line {
+    margin: 0rem auto;
+    display: block;
 }
-.footer__container {
-}
-.container {
-}
+
+.footer__container {}
+
+.container {}
+
 .container__cite {
+    color: var(--first-color);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.9rem;
+    letter-spacing: 0%;
+    text-align: left;
 }
-.container__link {
-}
-.link {
-}
-.link__logo {
-}
+
+.container__link {}
+
+.link {}
+
+.link__logo {}
