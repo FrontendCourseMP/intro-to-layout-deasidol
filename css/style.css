@@ -110,12 +110,14 @@ html {
     letter-spacing: 0%;
     text-align: left;
     margin-bottom: 4rem;
+    width: 34.2rem;
 }
 
 .title {}
 
 .title__span {
     font-size: 1.6rem;
+    width: 34.2rem;
 }
 
 .hero__picture {
@@ -162,6 +164,7 @@ html {
     text-align: left;
     color: var(--third-color);
     margin-bottom: 0.6rem;
+    width: 10.1rem;
 }
 
 .contact__text {
@@ -172,6 +175,7 @@ html {
     text-align: left;
     color: var(--third-color);
     margin-bottom: 0.5rem;
+    width: 20.5rem;
 }
 
 .info {
@@ -193,6 +197,7 @@ html {
     text-align: center;
     color: var(--third-color);
     margin-bottom: 3rem;
+    width: 34.2rem;
 }
 
 .info__line {
@@ -208,6 +213,7 @@ html {
     text-align: left;
     color: var(--third-color);
     margin-bottom: 3rem;
+    width: 34.2rem;
 }
 
 .info__capabilities {
@@ -236,6 +242,7 @@ html {
     letter-spacing: 0%;
     text-align: left;
     color: var(--third-color);
+    width: 20rem;
 }
 
 .info__image {
@@ -260,6 +267,7 @@ html {
     text-align: center;
     color: var(--third-color);
     margin-bottom: 3.2rem;
+    width: 34.2rem;
 }
 
 .equipment__line {
@@ -287,6 +295,7 @@ html {
     line-height: 1.9rem;
     letter-spacing: 0%;
     text-align: left;
+    width: 10.2rem;
 }
 
 .equipment__subtitle {
@@ -297,6 +306,7 @@ html {
     text-align: left;
     color: var(--third-color);
     margin-bottom: 1.6rem;
+    width: 15.1rem;
 }
 
 .equipment__text {
@@ -307,6 +317,7 @@ html {
     text-align: left;
     color: var(--third-color);
     margin-bottom: 4rem;
+    width: 33.5rem;
 }
 
 .equipment__picture {
@@ -337,6 +348,7 @@ html {
     text-align: center;
     color: var(--first-color);
     margin-bottom: 3.2rem;
+    width: 34.2rem;
 }
 
 .advantages__line {
@@ -372,6 +384,7 @@ html {
     text-align: left;
     color: var(--third-color);
     margin-bottom: 1.6rem;
+    width: 29.6rem;
 }
 
 .frame__line {
@@ -386,6 +399,7 @@ html {
     letter-spacing: 0%;
     text-align: left;
     color: var(--third-color);
+    width: 27.8rem;
 }
 
 .customers {}
@@ -404,6 +418,7 @@ html {
     text-align: center;
     color: var(--third-color);
     margin-bottom: 3.2rem;
+    width: 34.2rem;
 }
 
 .customers__line {
@@ -443,6 +458,7 @@ html {
     text-align: center;
     color: var(--first-color);
     margin-bottom: 3.2rem;
+    width: 34.2rem;
 }
 
 .order__line {
@@ -468,6 +484,7 @@ html {
     letter-spacing: 0%;
     text-align: left;
     margin-bottom: 0.4rem;
+    width: 47rem;
 }
 
 .label__input {
@@ -488,6 +505,7 @@ html {
     text-align: left;
     color: var(--first-color);
     margin-bottom: 4rem;
+    width: 34.2rem;
 }
 
 .form__button {
@@ -518,6 +536,7 @@ html {
     text-align: center;
     color: var(--third-color);
     margin-bottom: 3.2rem;
+    width: 34.2rem;
 }
 
 .objects__line {
@@ -542,6 +561,7 @@ html {
     text-align: left;
     color: var(--third-color);
     margin-bottom: 1rem;
+    width: 16.7rem;
 }
 
 .communication {}
@@ -562,6 +582,7 @@ html {
     text-align: center;
     color: var(--first-color);
     margin-bottom: 3.2rem;
+    width: 34.2rem;
 }
 
 .communication__line {
@@ -596,6 +617,7 @@ html {
     text-align: left;
     color: var(--first-color);
     margin-bottom: 0.4rem;
+    width: 11rem;
 }
 
 .connect__text {
@@ -606,6 +628,7 @@ html {
     text-align: left;
     color: var(--first-color);
     margin-bottom: 0.4rem;
+    width: 22.5rem;
 }
 
 .communication__feedback {
@@ -623,6 +646,7 @@ html {
     letter-spacing: 0%;
     text-align: left;
     color: var(--first-color);
+    width: 27.8rem;
 }
 
 .request {}
@@ -646,6 +670,7 @@ html {
     text-align: left;
     color: var(--first-color);
     margin-bottom: 2.4rem;
+    width: 34.2rem;
 }
 
 .forma__label {
@@ -660,7 +685,6 @@ html {
     letter-spacing: 0%;
     text-align: left;
     color: var(--first-color);
-
 }
 
 .forma__button {
