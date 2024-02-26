@@ -40,8 +40,6 @@
 
 body {
     font-family: Roboto;
-
-
 }
 
 
@@ -54,17 +52,15 @@ html {
     box-sizing: border-box;
 }
 
-.header {}
+.header {
+}
 
 .header__wrapper {
-    width: 100%;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 1rem 2rem;
     background: url(../img/header.png) no-repeat center;
     background-size: cover;
-    height: 150px;
-    display: flex;
-    justify-content: space-between;
 }
 
 .header__logo {}
@@ -79,12 +75,13 @@ html {
 
 .nav__picture {}
 
-.hero {}
+.hero {
+}
 
 .hero__wrapper {
     background: url(../img/wrapper1.jpg) no-repeat center;
     background-size: cover;
-    width: 100%;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 4rem 2rem;
 }
@@ -110,14 +107,14 @@ html {
     letter-spacing: 0%;
     text-align: left;
     margin-bottom: 4rem;
-    width: 34.2rem;
+    max-width: 34.2rem;
 }
 
 .title {}
 
 .title__span {
     font-size: 1.6rem;
-    width: 34.2rem;
+    max-width: 34.2rem;
 }
 
 .hero__picture {
@@ -140,18 +137,25 @@ html {
     display: block;
 }
 
-.contacts {}
-
-.contacts__wrapper {
-    width: 100%;
-    margin: 0 auto;
-    padding: 4rem 6rem;
+.contacts {
 }
 
-.contacts__contact {}
+.contacts__wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 4rem 6rem;
+    background-color: var(--first-color);
+}
+
+.contacts__contact {
+    max-width: 30rem;
+}
 
 .contact {}
 
+.contact__text-wrapper{
+    max-width: 1170px;
+}
 .contact__picture {
     display: block;
 }
@@ -164,7 +168,9 @@ html {
     text-align: left;
     color: var(--third-color);
     margin-bottom: 0.6rem;
-    width: 10.1rem;
+    max-width: 10.1rem;
+    display: flex;
+    
 }
 
 .contact__text {
@@ -175,16 +181,15 @@ html {
     text-align: left;
     color: var(--third-color);
     margin-bottom: 0.5rem;
-    width: 20.5rem;
+    max-width: 20.5rem;
 }
 
 .info {
-    
 }
 
 .info__wrapper {
     background-color: var(--fourth-color);
-    width: 100%;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 1rem 2rem;
 }
@@ -197,7 +202,7 @@ html {
     text-align: center;
     color: var(--third-color);
     margin-bottom: 3rem;
-    width: 34.2rem;
+    max-width: 34.2rem;
 }
 
 .info__line {
@@ -213,7 +218,7 @@ html {
     text-align: left;
     color: var(--third-color);
     margin-bottom: 3rem;
-    width: 34.2rem;
+    max-width: 34.2rem;
 }
 
 .info__capabilities {
@@ -242,7 +247,7 @@ html {
     letter-spacing: 0%;
     text-align: left;
     color: var(--third-color);
-    width: 20rem;
+    max-width: 20rem;
 }
 
 .info__image {
@@ -250,11 +255,12 @@ html {
     margin: 0rem auto 4rem auto;
 }
 
-.equipment {}
+.equipment {
+}
 
 .equipment__wrapper {
     background-color: var(--first-color);
-    width: 100%;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 1rem 2rem;
 }
@@ -267,7 +273,7 @@ html {
     text-align: center;
     color: var(--third-color);
     margin-bottom: 3.2rem;
-    width: 34.2rem;
+    max-width: 34.2rem;
 }
 
 .equipment__line {
@@ -295,7 +301,6 @@ html {
     line-height: 1.9rem;
     letter-spacing: 0%;
     text-align: left;
-    width: 10.2rem;
 }
 
 .equipment__subtitle {
@@ -306,7 +311,7 @@ html {
     text-align: left;
     color: var(--third-color);
     margin-bottom: 1.6rem;
-    width: 15.1rem;
+    max-width: 15.1rem;
 }
 
 .equipment__text {
@@ -317,7 +322,7 @@ html {
     text-align: left;
     color: var(--third-color);
     margin-bottom: 4rem;
-    width: 33.5rem;
+    max-width: 33.5rem;
 }
 
 .equipment__picture {
@@ -330,12 +335,13 @@ html {
     margin: 0rem auto 5rem auto;
 }
 
-.advantages {}
+.advantages {
+}
 
 .advantages__wrapper {
     background: url(../img/advantageswrapper.png) no-repeat center;
     background-size: cover;
-    width: 100%;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 1rem 2rem;
 }
@@ -348,7 +354,7 @@ html {
     text-align: center;
     color: var(--first-color);
     margin-bottom: 3.2rem;
-    width: 34.2rem;
+    max-width: 34.2rem;
 }
 
 .advantages__line {
@@ -384,7 +390,7 @@ html {
     text-align: left;
     color: var(--third-color);
     margin-bottom: 1.6rem;
-    width: 29.6rem;
+    max-width: 29.6rem;
 }
 
 .frame__line {
@@ -399,13 +405,15 @@ html {
     letter-spacing: 0%;
     text-align: left;
     color: var(--third-color);
-    width: 27.8rem;
+    max-width: 27.8rem;
 }
 
-.customers {}
+.customers {
+}
 
 .customers__wrapper {
-    width: 100%;
+    background-color: var(--first-color);
+    max-width: 1170px;
     margin: 0 auto;
     padding: 1rem 2rem;
 }
@@ -418,7 +426,7 @@ html {
     text-align: center;
     color: var(--third-color);
     margin-bottom: 3.2rem;
-    width: 34.2rem;
+    max-width: 34.2rem;
 }
 
 .customers__line {
@@ -440,12 +448,13 @@ html {
     display: block;
 }
 
-.order {}
+.order {
+}
 
 .order__wrapper {
     background: url(../img/orderwrapper.jpg) no-repeat center;
     background-size: cover;
-    width: 100%;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 1rem 2rem;
 }
@@ -458,7 +467,7 @@ html {
     text-align: center;
     color: var(--first-color);
     margin-bottom: 3.2rem;
-    width: 34.2rem;
+    max-width: 34.2rem;
 }
 
 .order__line {
@@ -484,7 +493,7 @@ html {
     letter-spacing: 0%;
     text-align: left;
     margin-bottom: 0.4rem;
-    width: 47rem;
+    max-width: 47rem;
 }
 
 .label__input {
@@ -505,7 +514,7 @@ html {
     text-align: left;
     color: var(--first-color);
     margin-bottom: 4rem;
-    width: 34.2rem;
+    max-width: 34.2rem;
 }
 
 .form__button {
@@ -519,11 +528,12 @@ html {
     text-align: center;
 }
 
-.objects {}
+.objects {
+}
 
 .objects__wrapper {
     background-color: var(--first-color);
-    width: 100%;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 1rem 2rem;
 }
@@ -536,7 +546,7 @@ html {
     text-align: center;
     color: var(--third-color);
     margin-bottom: 3.2rem;
-    width: 34.2rem;
+    max-width: 34.2rem;
 }
 
 .objects__line {
@@ -561,15 +571,17 @@ html {
     text-align: left;
     color: var(--third-color);
     margin-bottom: 1rem;
-    width: 16.7rem;
+    max-width: 16.7rem;
 }
 
-.communication {}
+.communication {
+
+}
 
 .communication__wrapper {
     background: url(../img/communicationwrapper.jpg) no-repeat center;
     background-size: cover;
-    width: 100%;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 1rem 2rem;
 }
@@ -582,7 +594,7 @@ html {
     text-align: center;
     color: var(--first-color);
     margin-bottom: 3.2rem;
-    width: 34.2rem;
+    max-width: 34.2rem;
 }
 
 .communication__line {
@@ -617,7 +629,7 @@ html {
     text-align: left;
     color: var(--first-color);
     margin-bottom: 0.4rem;
-    width: 11rem;
+    max-width: 11rem;
 }
 
 .connect__text {
@@ -628,7 +640,7 @@ html {
     text-align: left;
     color: var(--first-color);
     margin-bottom: 0.4rem;
-    width: 22.5rem;
+    max-width: 22.5rem;
 }
 
 .communication__feedback {
@@ -646,14 +658,14 @@ html {
     letter-spacing: 0%;
     text-align: left;
     color: var(--first-color);
-    width: 27.8rem;
+    max-width: 27.8rem;
 }
 
 .request {}
 
 .request__wrapper {
     background-color: var(--third-color);
-    width: 100%;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 1rem 2rem;
 }
@@ -670,7 +682,7 @@ html {
     text-align: left;
     color: var(--first-color);
     margin-bottom: 2.4rem;
-    width: 34.2rem;
+    max-width: 34.2rem;
 }
 
 .forma__label {
@@ -685,6 +697,7 @@ html {
     letter-spacing: 0%;
     text-align: left;
     color: var(--first-color);
+    max-width: 34.2rem;
 }
 
 .forma__button {
@@ -703,7 +716,7 @@ html {
 .footer {}
 
 .footer__wrapper {
-    width: 100%;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 1rem 2rem;
     background-color: var(--third-color);
