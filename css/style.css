@@ -108,6 +108,7 @@ html {
     text-align: left;
     margin-bottom: 4rem;
     max-width: 34.2rem;
+    overflow-wrap: break-word;
 }
 
 .title {}
