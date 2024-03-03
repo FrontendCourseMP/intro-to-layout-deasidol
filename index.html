@@ -13,21 +13,40 @@
     <header class="header">
         <div class="header__wrapper">
             <a href="" class="header__logo logo">
-                <img src="img/Logo.svg" alt="логотип сахара груп" class="logo__picture">
+                <picture class="header__logo">
+                    <source srcset="../img/logoo.svg" class="logo__picture" media="(min-width: 1400px)">
+                    <source srcset="../img/logo.svg" class="logo__picture">
+                    <img src="img/Logo.svg" alt="логотип сахара груп" class="logo__picture">
+                </picture>
             </a>
             <a href="" class="header__nav nav">
                 <img src="img/Menu.svg" alt="меню навигации" class="nav__picture">
             </a>
+            <nav class="desktop__nav">
+                <a href="" class="nav__link">О компании</a>
+                <a href="" class="nav__link">Наши преимущества</a>
+                <a href="" class="nav__link">Заказчики</a>
+                <a href="" class="nav__link">Объекты</a>
+                <a href="" class="nav__link">Контакты</a>
+            </nav>
+            <a href="" class="header__phone">8 800 600-15-05</a>
         </div>
     </header>
     <section class="hero">
         <div class="hero__wrapper">
-            <h1 class="visually__hidden">Сахара Груп Аренда специализированных насосных станций</h1>
-            <h2 class="hero__title title">Аренда специализированных насосных станций
-                <span class="title__span">для водопонижения и водоотведения
-                </span>
-            </h2>
-            <img src="img/Bump 1.png" alt="насосная станция" class="hero__picture">
+            <div class="desktop__wrapper">
+                <h1 class="visually__hidden">Сахара Груп Аренда специализированных насосных станций</h1>
+                <h2 class="hero__title title">Аренда специализированных насосных станций
+                    <span class="title__span">для водопонижения и водоотведения
+                    </span>
+                </h2>
+                <button class="desktop__button">Заказать звонок</button>
+            </div>
+            <picture class="hero__bump">
+                <source srcset="../img/bumpp1.png" class="hero__picture" media="(min-width: 1400px)">
+                <source srcset="../img/Bump1.png" class="hero__picture">
+                <img src="img/Bump1.png" alt="насосная станция" class="hero__picture">
+            </picture>
             <button class="hero__button">Заказать звонок</button>
         </div>
     </section>
@@ -77,7 +96,11 @@
                     <p class="card__sign">Лет на рынке водопонижения</p>
                 </div>
             </div>
-            <img src="img/bump 2.jpg" alt="насосная станция" class="info__image">
+            <picture class="info__bump">
+                <source srcset="../img/bumpp2.jpg" class="info_image" media="(min-width: 1400px)">
+                <source srcset="../img/bump2.jpg" class="info_image">
+                <img src="img/bump2.jpg" alt="насосная станция" class="info__image">
+            </picture>
         </div>
     </section>
     <section class="equipment">
@@ -96,7 +119,11 @@
 
                 Данный насос имеет компактный корпус и низкий уровень шума, благодаря чему его можно использовать даже в
                 густонаселенных районах крупных городов.</p>
-            <img src="img/bump 3.png" alt="насосная станция" class="equipment__picture">
+            <picture class="equipment__image">
+                <source srcset="img/bumpp3.png" class="equipment__picture" media="(min-width: 1400px)">
+                <source srcset="img/bump3.png" class="equipment__picture">
+                <img src="img/bump3.png" alt="насосная станция" class="equipment__picture">
+            </picture>
             <img src="img/3 lines.svg" alt="три оранжевых линии" class="equipment__lines">
         </div>
     </section>
@@ -177,7 +204,11 @@
         <div class="objects__wrapper">
             <h2 class="objects__title">Наши объекты</h2>
             <img src="img/line1.svg" alt="оранжевая линия" class="objects__line">
-            <img src="img/maprussia.svg" alt="карта России" class="objects__picture">
+            <picture class="map">
+                <source srcset="img/map2.svg" class="objects__picture" media="(min-width: 1400px)">
+                <source srcset="img/maprussia.svg" class="objects__picture">
+                <img src="img/maprussia.svg" alt="карта России" class="objects__picture">
+            </picture>
             <ul class="objects__cities cities">
                 <li class="cities__city">Екатеринбург</li>
                 <li class="cities__city">Казань</li>
@@ -191,51 +222,54 @@
     <section class="communication">
         <div class="communication__wrapper">
             <h2 class="communication__title">Контакты</h2>
-            <img src="img/line1.svg" alt="Оранжевая линия" class="communication__line">
-            <div class="communication__connect connect">
-                <div class="connect__contacts">
-                    <img src="img/znakpisma.svg" alt="знак письма" class="connect__img">
-                    <h3 class="connect__subtitle">Связь с нами</h3>
-                    <p class="connect__text">8 800 600-15-05</p>
-                    <p class="connect__text">office@sahara@group.ru</p>
+            <div class="communication__background">
+                <img src="img/line1.svg" alt="Оранжевая линия" class="communication__line">
+                <div class="communication__connect connect">
+                    <div class="connect__contacts">
+                        <img src="img/znakpisma.svg" alt="знак письма" class="connect__img">
+                        <h3 class="connect__subtitle">Связь с нами</h3>
+                        <p class="connect__text">8 800 600-15-05</p>
+                        <p class="connect__text">office@sahara@group.ru</p>
+                    </div>
+                    <div class="connect__locaion">
+                        <img src="img/znakgeolocation.svg" alt="знак геолокации" class="connect__img">
+                        <h3 class="connect__subtitle">Наша локация</h3>
+                        <p class="connect__text">Ленинградская область, Новоприозерское ш.11км.Трасса А-121</p>
+                    </div>
                 </div>
-                <div class="connect__locaion">
-                    <img src="img/znakgeolocation.svg" alt="знак геолокации" class="connect__img">
-                    <h3 class="connect__subtitle">Наша локация</h3>
-                    <p class="connect__text">Ленинградская область, Новоприозерское ш.11км.Трасса А-121</p>
+                <div class="communication__feedback feedback">
+                    <p class="feedback__text">Наши менеджеры обработают вашу заявку и сразу же свяжутся с вами в рабочее
+                        время 9:00 — 18:00 МСК.</p>
+                </div>
+                <div class="communication__request request">
+                    <div class="request__wrapper">
+                        <form action="" class="request__forma forma">
+                            <h3 class="forma__title">Свяжитесь с нами удобным вам способом
+                                или оставьте заявку и наши специалисты позвонят вам</h3>
+                            <label for="" class="forma__label label">
+                                <span class="label__span">Ваше имя</span>
+                                <input type="text" class="label__input">
+                            </label>
+                            <label for="" class="forma__label label">
+                                <span class="label__span">Название компании</span>
+                                <input type="text" class="label__input">
+                            </label>
+                            <label for="" class="forma__label label">
+                                <span class="label__span">Телефон</span>
+                                <input type="text" class="label__input">
+                                <p class="label__text">Я даю свое согласие на обработку моей персональной информации в
+                                    соответствии
+                                    с политикой конфиденциальности</p>
+                            </label>
+                            <label for="" class="forma__label label">
+                                <span class="label__span">Комментарий</span>
+                                <input type="text" class="label__input label__input--comm">
+                            </label>
+                            <button class="forma__button">Отправить</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <div class="communication__feedback feedback">
-                <p class="feedback__text">Наши менеджеры обработают вашу заявку и сразу же свяжутся с вами в рабочее
-                    время 9:00 — 18:00 МСК.</p>
-            </div>
-        </div>
-    </section>
-    <section class="request">
-        <div class="request__wrapper">
-            <form action="" class="request__forma forma">
-                <h3 class="forma__title">Свяжитесь с нами удобным вам способом
-                    или оставьте заявку и наши специалисты позвонят вам</h3>
-                <label for="" class="forma__label label">
-                    <span class="label__span">Ваше имя</span>
-                    <input type="text" class="label__input">
-                </label>
-                <label for="" class="forma__label label">
-                    <span class="label__span">Название компании</span>
-                    <input type="text" class="label__input">
-                </label>
-                <label for="" class="forma__label label">
-                    <span class="label__span">Телефон</span>
-                    <input type="text" class="label__input">
-                    <p class="label__text">Я даю свое согласие на обработку моей персональной информации в соответствии
-                        с политикой конфиденциальности</p>
-                </label>
-                <label for="" class="forma__label label">
-                    <span class="label__span">Комментарий</span>
-                    <input type="text" class="label__input label__input--comm">
-                </label>
-                <button class="forma__button">Отправить</button>
-            </form>
         </div>
     </section>
     <footer class="footer">
