@@ -5,6 +5,11 @@
     --fourth-color: rgb(239, 239, 239);
 }
 
+::selection {
+    color: var(--first-color);
+    background-color: var(--second-color);
+}
+
 /* roboto-regular - cyrillic_latin */
 @font-face {
     font-display: swap;
@@ -520,13 +525,19 @@ html {
 .label__input {
     padding: 1.2rem 4rem;
     margin-bottom: 0.8rem;
-    display: grid;
+    background-color: var(--first-color);
+    color: black;
+    font-weight: normal;
+    font-size: 1.6rem;
 }
 
 .label__input--comm {
     min-height: 18rem;
     margin-bottom: 2rem;
-    display: grid;
+    background-color: var(--first-color);
+    color: black;
+    font-weight: normal;
+    font-size: 1.6rem;
 }
 
 .form__text {
@@ -1105,6 +1116,11 @@ html {
         text-align: left;
     }
 
+    .nav__link:hover {
+        color: var(--second-color);
+        text-decoration: underline;
+    }
+
     .header__phone {
         text-decoration: none;
         color: var(--second-color);
@@ -1114,4 +1130,61 @@ html {
         letter-spacing: 0%;
         text-align: left;
     }
+
+    .label__input {
+        background-color: var(--first-color);
+        width: 28rem;
+        color: black;
+        font-weight: normal;
+        font-size: 1.6rem;
+    }
+
+    .label__input--comm {
+        background-color: var(--first-color);
+        width: 58.3rem;
+        color: black;
+        font-weight: normal;
+        font-size: 1.6rem;
+    }
+}
+
+.hero__button,
+.desktop__button,
+.elem__button,
+.form__button,
+.forma__button {
+    transition: color 0.5s, text-decoration 0.3s;
+}
+
+.hero__button:hover,
+.desktop__button:hover,
+.elem__button:hover,
+.form__button:hover,
+.forma__button:hover,
+.customer__customerlink:hover,
+.nav_link:hover,
+.header__phone:hover {
+    color: var(--third-color);
+    text-decoration: underline;
+}
+.hero__button:active,
+.desktop__button:active,
+.elem__button:active,
+.form__button:active,
+.forma__button:active,
+.customer__customerlink:active,
+.nav_link:active,
+.header__phone:active {
+    color: black;
+}
+.hero__button:focus,
+.desktop__button:focus,
+.elem__button:focus,
+.form__button:focus,
+.forma__button:focus,
+.customer__customerlink:focus,
+.nav_link:focus,
+.header__phone:focus{ 
+    outline: 2px solid var(--third-color);
+    outline-offset: 3px;
 }
