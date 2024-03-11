@@ -922,6 +922,7 @@ html {
         text-align: left;
         color: var(--third-color);
         max-width: 20.2rem;
+        padding-left: 45rem;
     }
 
     .info__text {
@@ -953,6 +954,7 @@ html {
         text-align: left;
         color: var(--third-color);
         max-width: 34.5rem;
+        padding-left: 39rem;
     }
 
     .equipment__subtitle {
@@ -983,6 +985,7 @@ html {
         text-align: left;
         color: var(--first-color);
         max-width: 35.9rem;
+        padding-left: 39rem;
     }
 
     .frame__subtitle {
@@ -1013,6 +1016,7 @@ html {
         text-align: center;
         color: var(--third-color);
         max-width: 18.6rem;
+        padding-left: 47rem;
     }
 
     .order__title {
@@ -1023,6 +1027,7 @@ html {
         text-align: center;
         color: var(--first-color);
         max-width: 120rem;
+        padding-left: 2rem;
     }
 
     .label__span {
@@ -1053,6 +1058,7 @@ html {
         text-align: left;
         color: var(--third-color);
         max-width: 25.7rem;
+        padding-left: 44rem;
     }
 
     .communication__title {
@@ -1063,6 +1069,7 @@ html {
         text-align: left;
         color: var(--first-color);
         max-width: 17rem;
+        padding-left: 47rem;
     }
 
     .connect__subtitle {
@@ -1159,6 +1166,14 @@ html {
         color: black;
         font-weight: normal;
         font-size: 1.6rem;
+    }
+    .order__form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form__label {
+        margin-bottom: 10px;
     }
 }
 
