@@ -14,7 +14,7 @@
         <section class="header">
             <div class="header__wrapper">
                 <div class="header-wrapper__block">
-                    <img src="/img/Logo.png" alt="" class="header-wrapper__img">
+                    <img src="/img/logoo.svg" alt="Лого компании Сахара" class="header-wrapper__img">
                     <button class="header-wrapper__button"></button>
                 </div>
             </div>
@@ -72,86 +72,96 @@
                 </form>
             </div>
         </section>
+        <div>
+            <form action="post" class="form main-worksheet main-worksheet">
+                <dl>
+                    <dt>Псевдоэлемент</dt>
+                    <dd> Элементы, которых не существует в HTML-разметке. Они создаются и позиционируются исключительно
+                        при помощи CSS. Чаще всего используются для создания различных декоративных элементов (которые
+                        не несут содержательного смысла).Также псевдоэлементы приходят на помощь, когда нужно наложить
+                        поверх картинки так называемый оверлей (перекрывающий слой). На этом польза от псевдоэлементов
+                        не заканчивается</dd>
+                    <dt>Псевдокласс</dt>
+                    <dd>Особый вид селектора, который уточняет тип или состояние. Обычно это какой-то качественный
+                        признак: реакция на наведение курсора, порядок следования и другие.</dd>
+                </dl>
+                <fieldset class="main-worksheet__fieldset">
+                    <legend>Псевдоэлементы</legend>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="psclass" id="::before" value="::before" checked>
+                            <label for="::before">::before</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="psclass" id="::after" value="::after" checked>
+                            <label for="::after">::after</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="psclass" id="::first-letter" value="::first-letter" checked>
+                            <label for="::first-letter">::first-letter</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="psclass" id="::selection" value="::selection">
+                            <label for="::selection" aria-checked="true">::selection</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="psclass" id="::first-line" value="::first-line">
+                            <label for="::first-line">::first-line</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="psclass" id="::placeholder" value="::placeholder" checked>
+                            <label for="::placeholder">::placeholder</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="psclass" id="::marker" value="::marker">
+                            <label for="::marker">::marker</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="main-worksheet__fieldset">
+                    <legend>Псевдоклассы</legend>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="psclass" id=":active" value=":active" checked>
+                            <label for=":active">:active</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="psclass" id=":hover" value=":hover" checked>
+                            <label for=":hover">:hover</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="psclass" id=":focus" value=":focus" checked>
+                            <label for=":focus">:focus</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="psclass" id=":checked" value=":checked" checked>
+                            <label for=":checked" aria-checked="true">:checked</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="psclass" id=":not" value=":not">
+                            <label for=":not">:not</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="psclass" id=":root" value=":root" checked>
+                            <label for=":root">:root</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="psclass" id=":empty" value=":empty">
+                            <label for=":empty">:empty</label>
+                        </li>
+                    </ul>
+                </fieldset>
+            </form>
+        </div>
 
     </main>
     <footer>
-        <section class="Contacts">
-            <div class="image-part">
-                <div class="wrapper">
-                    <h2 class="contacts_txt-title">Контакты</h2>
-                    <div class="line"></div>
-                    <div class="orange">
-                        <div class="orange-wrapper">
-
-
-                            <ul class="contacts_list">
-                                <li class="contacts_iteam">
-                                    <img src="/img/mdi_email-outline.svg" alt="картинка почты" class="contacts_pic">
-                                    <h3 class="contacts_txt">Связь с нами</h3>
-                                    <a href="" class="contacts_link">8 800 600-15-05</a>
-                                    <a href="" class="contacts_link">office@sahara-group.ru</a>
-                                </li>
-                                <li class="contacts_iteam">
-                                    <img src="/img/simple-line-icons_location-pin.svg" alt="картинка локации"
-                                        class="contacts_pic">
-                                    <h3 class="contacts_txt">Наша локация</h3>
-                                    <p class="contacts_iteam_txt">Ленинградская область, Новоприозерское ш.11 км. Трасса
-                                        А-121</p>
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="blue-p">
-                <div class="wrapper">
-                    <div class="gray">
-                        <div class="gray-wrapper">
-                            <ul class="processing_information">
-                                <li class="processing-information_txt">Наши менеджеры обработают вашу заявку и сразу же
-                                    свяжутся с вами в рабочее время 9:00 — 18:00 МСК.</li>
-                            </ul>
-                        </div>
-                        <p class="progcessin_txt">Свяжитесь с нами удобным вам способом или оставьте заявку и наши
-                            специалисты позвонят вам</p>
-                    </div>
-                    <form action="" class="filling-application">
-                        <label for="name">
-                            <span class="title-filling-application">Ваше имя</span>
-                            <input class="form_input-fill" id="name" type="text">
-                        </label>
-
-                        <label for="name_company">
-                            <span class="title-filling-application">Название компании</span>
-                            <input class="form_input-fill" id="name_company" type="text">
-                        </label>
-
-                        <label for="telephone">
-                            <span class="title-filling-application">Телефон</span>
-                            <input class="form_input-fill" id="telephone" type="text">
-                        </label>
-
-                        <a href="" class="filling-application_txt">Я даю свое согласие на обработку моей персональной
-                            информации в соответствии с политикой конфиденциальности</a>
-
-                        <label for="koment"><span class="koment1">Коментарий</span>
-                            <textarea class="form_tekstarea" id="koment" type="text"></textarea>
-                        </label>
-
-                        <button type="submit" class="filling-application_buttom">Отправить</button>
-                    </form>
-                    <div class="footer-line"></div>
-                    <div class="footer">
-                        <p class="footer_txt">2015 — 2023 г.</p>
-                        <a href="/grid.html" class="">лаба7</a>
-                        <img class="footer_pic" src="/img/footer_logo.svg" alt="лого компании">
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <div class="footer-line"></div>
+        <div class="footer">
+            <p class="footer_txt">2015 — 2023 г.</p>
+            <img class="footer_pic" src="/img/logofooter.svg" alt="лого компании">
+        </div>
+        </div>
     </footer>
 </body>
 

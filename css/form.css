@@ -53,8 +53,10 @@ body {
 }
 
 :root {
-    --main-color: #1A4D70;
-    --two-main-color: #FFFFFF;
+    --first-color: #1A4D70;
+    --second-color: #FFFFFF;
+    --third-color: #F49C89;
+    --fourth-color: yellow;
 }
 
 .wrapper {
@@ -63,11 +65,9 @@ body {
 }
 
 .header {
-
-    position: absolute;
     margin: 0 auto;
     width: 100%;
-    background: url(/img/headerrr.svg) no-repeat center;
+    background: url(/img/headerr.png) no-repeat center;
     background-size: cover;
     height: 150px;
 
@@ -145,195 +145,172 @@ main {
     font-weight: normal;
     line-height: 125%;
 }
+.form-span{
+    color: #1A4D70;
+}
 
 .form-input {
-    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 2px solid black;
     border-radius: 10px;
+    width: 100%;
 
 }
 
-.contacts_txt-title {
-    color: var(--two-main-color);
-    text-align: center;
-    font-family: Roboto;
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 32px;
-    padding-top: 40px;
-}
-
-.orange {
-    width: 342px;
-    height: 317px;
-    background-color: #F9572B;
-}
-
-.orange-wrapper {
-    max-width: 278px;
+.footer{
     margin: 0 auto;
-}
-
-.contacts_pic {
-    margin-top: 32px;
-    margin-bottom: 12px;
-}
-
-
-.contacts_txt {
-    color: var(--two-main-color);
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 900;
-    margin-bottom: 4px;
-}
-
-.contacts_link {
-    display: block;
-    text-decoration: none;
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--two-main-color);
-}
-
-.contacts_iteam_txt {
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--two-main-color);
-    max-width: 225px;
-}
-
-.blue-p {
-    background-color: var(--main-color);
-
-}
-
-.gray {
-    width: 342px;
-    height: 112px;
-    background-color: #777;
-
-}
-
-.gray-wrapper {
-    max-width: 278px;
-    margin: 0 auto;
-}
-
-.processing-information_txt {
-    padding-top: 32px;
-    color: var(--White, #FFF);
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.progcessin_txt {
-    display: block;
-    color: var(--White, #FFF);
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 500;
-    margin-top: 70px;
-}
-
-
-.filling-application {
-    margin-top: 121px;
-    display: flex;
-    flex-wrap: wrap;
-    font-family: Roboto;
-}
-
-.filling-application_txt {
-    display: block;
-    text-decoration: none;
-    color: #FFF;
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 400;
-    margin-top: 8px;
-    margin-bottom: 24px;
-
-}
-
-.form_input-fill {
-    margin-bottom: 24px;
-    width: 342px;
-    height: 43px;
-    padding: 12px 40px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 5px;
-    border: none;
-}
-
-
-
-span {
-    font-family: Roboto;
-}
-
-.form_tekstarea {
-    display: flex;
-    width: 342px;
-    height: 180px;
-    padding: 12px 40px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border: none;
-
-}
-
-.koment1 {
-    color: #FFF;
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 400;
-}
-
-
-.filling-application_buttom {
-    display: inline-flex;
-    padding: 12px 40px;
-    justify-content: center;
-    align-items: center;
-    background-color: #F9572B;
-    color: var(--two-main-color);
-    border: none;
-    border-radius: 4px;
-    margin-top: 32px;
-}
-
-.footer {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
     padding-bottom: 40px;
+    max-width: 342px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.form__name{
+    color: var(--first-color);
+    font-size: 20px;
+    
 }
 
-.footer-line {
+.footer-line{
     width: 342px;
     height: 1px;
     background-color: #777;
     margin-top: 52px;
 }
 
-.footer_txt {
+.footer_txt{
     color: #FFFFFF;
     font-family: Roboto;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+footer{
+    background-color: var(--first-color);
+}
+.footer_pic{
+    transform: rotate(-29deg) skew(10deg, 10deg) scale(2);
+
+}
+legend{
+    font-weight: 50rem;
+
+    color: var(--main-color);
+    font-size: 18px;
+}
+
+dl{
+    font-size: 20px;
+    font-family: Roboto;
+}
+dt::first-letter{
+    font-size: 2rem;
+    color: var(--third-color);
+}
+dd::before{
+    content: '\01F6C8';
+    color: var(--third-color);
+    margin-right: 4px;
+}
+dt::first-letter{
+    font-size: 14px;
+    color: var(--third-color);
+}
+dd::before{
+    content: '\01F6C8';
+    margin-right: 4px;
+    font-size: 14px;
+    color: var(--third-color);
+}
+.main-worksheet__fieldset input{
+    display: none;
+}
+
+.main-worksheet__fieldset label{
+    position: relative;
+}
+
+.main-worksheet__fieldset label::after{
+    content: '';
+    position: absolute;
+    bottom: 40%;
+    left: 0;
+    width: 0;
+    background-color: var(--first-color);
+    transition: width 0.5s ease; 
+    height: 2px;
+}
+
+.main-worksheet__fieldset input:checked + label::after{
+    transition: cubic-bezier();
+    width: 100%;
+    transition-duration: 2s;
+}
+
+.main-worksheet li:nth-child(even){
+    padding-left: 5px;
+    margin-top: 10px;
+    border-left: 2px solid var(--first-color);
+}
+dt::first-letter{
+    font-size: 24px;
+    color: var(--first-color);
+}
+dd::before{
+    content: '\01F6C8';
+    color: var(--first-color);
+    margin-right: 5px;
+}
+
+.main-worksheet__fieldset input{
+    display: none;
+}
+
+.main-worksheet__fieldset label{
+    position: relative;
+}
+
+.main-worksheet__fieldset label::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 40%;
+    left: 0;
+    transition: width 0.3s ease; 
+    background-color: var(--first-color);
+}
+
+.main-worksheet__fieldset input:checked + label::after{
+    width: 100%;
+    transition-duration: 1s;
+    transition: cubic-bezier();
+}
+
+.main-worksheet li:nth-child(even){
+    padding-left: 5px;
+    margin-top: 10px;
+    border-left: 2px solid var(--first-color);
+}
+
+.main-worksheet li:nth-child(odd){
+    padding-left: 5px;
+    margin-top: 10px;
+    border-left: 2px solid  var(--third-color);
+}
+
+li{
+    font-size: 16px;
+    font-family: Roboto;
+}
+
+.main-worksheet li:nth-child(odd){
+    padding-left: 5px;
+    margin-top: 10px;
+    border-left: 2px solid var(--second-main);
 }
